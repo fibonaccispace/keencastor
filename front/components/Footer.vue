@@ -1,5 +1,6 @@
 <template lang="pug">
-    span footer
+.footer
+    span ©&nbsp;2021–2025&nbsp;keencastor 
 </template>
 
 <script>

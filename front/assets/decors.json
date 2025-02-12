@@ -1,0 +1,10 @@
+[
+  {
+    "id": "decor_now",
+    "style": {
+      "width": 290,
+      "height": 120,
+      "justifyContent": "flex-end"
+    } 
+  }
+]

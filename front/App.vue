@@ -1,6 +1,6 @@
 <template lang="pug">
 Header
-Gallery(:items="items")
+Gallery(:items="items", :decors="decors", :arts="arts")
 Footer
 </template>
 
@@ -14,12 +14,15 @@ export default {
   },
   data() {
     return {
-      items: []
+      items: [],
+      decors: [],
+      arts: [],
     }
   },
   async created() {
-    const response = await import('./assets/data.json')
-    this.items = await response.default
+    this.items = (await import('./assets/items.json')).default
+    this.decors = (await import('./assets/decors.json')).default
+    this.arts = (await import('./assets/arts.json')).default
   },
 }
 </script>

@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Neural network",
+    "description": "the simplest perceptron capable of classifying points of two classes on a plane. by the way, you can switch between different activation functions to explore the difference of dependency search",
+    "image": "public/images/nn.png",
+    "link": "public/pages/neuralnetwork/index.php"
+  },
+  {
+    "title": "Notes",
+    "description": "browser note manager with save function, notes can be deleted and pinned, create different boards and rename them",
+    "image": "public/images/notes.png",
+    "link": "public/pages/notes/index.php"
+  },
+  {
+    "title": "Board",
+    "description": "a common drawing area where anyone can draw anything and everyone can see it",
+    "image": "public/images/board.png",
+    "link": "public/pages/board/index.php"
+  },
+  {
+    "title": "Flappy Bird AI",
+    "description": "each bird has its own simple neural network with random weights. through natural selection and a genetic algorithm, the most successful birds pass their weights to the next generation with slight mutations, leading to correct behavior and jumping at the right moment",
+    "image": "public/images/flappy.png",
+    "link": "public/pages/flappy/index.php"
+  },
+  {
+    "title": "Maxwell-Boltzmann<br>distribution",
+    "description": "distribution of the number of molecular speeds in a closed space",
+    "image": "public/images/maxwell.png",
+    "link": "public/pages/maxwell-boltzmann/index.php"
+  },
+  {
+    "title": "Aurora borealis",
+    "description": "just beautiful",
+    "image": "public/images/aurora.png",
+    "link": "public/pages/aurora/index.php"
+  },
+  {
+    "title": "Trees",
+    "description": "generation of a random alien tree based on a large genotype. generating one tree may take some time",
+    "image": "public/images/tree.png",
+    "link": "public/pages/trees/index.php"
+  },
+  {
+    "title": "Lamp",
+    "description": "a game about a light bulb that needs to find a key to open a door. the game consists of 5 gradually more difficult levels, the game adds new mechanics gradually, but the damn 3rd level is impossible to pass",
+    "image": "public/images/lamp.png",
+    "link": "public/pages/lamp/index.php"
+  },
+  {
+    "title": "Julia set",
+    "description": "imaginary beauty",
+    "image": "public/images/julia.png",
+    "link": "public/pages/julia/index.php"
+  },
+  {
+    "title": "Procedural generation",
+    "description": "generating terrain by overlaying several noise maps. Perlin noise is not used, i use something else",
+    "image": "public/images/proceed.png",
+    "link": "public/pages/proceed/index.php"
+  },
+  {
+    "title": "Shader",
+    "description": "a simple shader without using libraries, maybe that`s why it`s so slow",
+    "image": "public/images/shader.png",
+    "link": "public/pages/shader/index.php"
+  },
+  {
+    "title": "Blind typing",
+    "description": "touch typing trainer",
+    "image": "public/images/blind.png",
+    "link": "public/pages/blind/index.php"
+  },
+  {
+    "title": "Rock, Paper, Scissors",
+    "description": "who will win? i dont know, mb u know?",
+    "image": "public/images/rps.png",
+    "link": "public/pages/rps/index.php"
+  },
+  {
+    "title": "Raycasting",
+    "description": "a method of representing three-dimensional space where rays are cast from the observer`s camera. the rays intersect with objects in the scene, determining their location, angle of incidence, material, texture, and so on",
+    "image": "public/images/ray.png",
+    "link": "public/pages/ray/index.php"
+  },
+  {
+    "title": "Markov chain",
+    "description": "a sequence of random words and sentences achieved by searching for states for each word from the original sentence",
+    "image": "public/images/markov.png",
+    "link": "public/pages/markov/index.php"
+  },
+  {
+    "title": "L-system",
+    "description": "recursive tree generation",
+    "image": "public/images/l-system.png",
+    "link": "public/pages/lsystem/index.php"
+  },
+  {
+    "title": "Chladni Patterns",
+    "description": "the interference surfaces of the Chladni plates are defined as the positions at which N harmonics are suppressed. rather than limiting it to a line or plane as in the classic Chladni plate experiments, a rich set of surfaces results from the presence of three orthogonal harmonics",
+    "image": "public/images/chladni.png",
+    "link": "public/pages/chladni/index.php"
+  },
+  {
+    "title": "Neural cellular automaton",
+    "description": "cellular automaton using the methods of convolutional neural networks - filters and activation functions. the example given uses a 3 by 3 filter with an inverted gaussian function",
+    "image": "public/images/nca.png",
+    "link": "public/pages/nca/index.php"
+  },
+  {
+    "title": "Procedural generation 3D",
+    "description": "generation of a pseudo three-dimensional canvas of heights, creating an image of the surface and biomes",
+    "image": "public/images/proceed22.png",
+    "link": "public/pages/proceed2/index.php"
+  },
+  {
+    "title": "PI approximation",
+    "description": "approximation of PI, which is calculated by dividing the total number of circles by the number of circles inside the circle, multiplied by 4",
+    "image": "public/images/pi.png",
+    "link": "public/pages/pi/index.php"
+  },
+  {
+    "title": "Nuclear reaction",
+    "description": "nuclear reaction that occurs when exposed to one free neutron",
+    "image": "public/images/nuclear.jpg",
+    "link": "public/pages/nuclear/index.php"
+  },
+  {
+    "title": "3D visualization",
+    "description": "cellular automaton using the methods of convolutional neural networks - filters and activation functions. the example given uses a 3 by 3 filter with an inverted gaussian function",
+    "image": "public/images/3d.png",
+    "link": "public/pages/3d/index.php"
+  }
+]

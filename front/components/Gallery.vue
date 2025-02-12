@@ -1,8 +1,9 @@
 <template lang="pug">
 
-ul
-  a(v-for="item in gallery" :href="item.link" target="_blank")
-    li(:class="[item.type]").small-item {{ item.description }}
+.gallery
+  ul
+    a(v-for="item in gallery" :href="item.link" target="_blank")
+      li(:class="[item.type]").small-item {{ item.description }}
 
 </template>
 
@@ -37,9 +38,18 @@ export default {
 <style scoped lang="sass">
 
 ul
-  column-count: 4
+  column-count: 5
   list-style-type: none
   counter-reset: section
+
+  @media(max-width: 1440px)
+    column-count: 4
+  @media(max-width: 1024px)
+    column-count: 3
+  @media(max-width: 768px)
+    column-count: 2
+  @media(max-width: 425px)
+    column-count: 1
 
 li
   background: #aaa
@@ -55,5 +65,9 @@ li
 
 .large-item
   background: red
+
+.decor
+  border-radius: 50%
+  background: blue
 
 </style>
