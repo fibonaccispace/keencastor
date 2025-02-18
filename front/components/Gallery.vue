@@ -2,34 +2,77 @@
 
 .gallery
   ul
-    a(v-for="item in gallery" :href="item.link" target="_blank")
-      li(:class="[item.type]").small-item {{ item.description }}
+    a(v-for="elem in gallery" href="#")
+      li(
+        v-if="elem.type == 'item'" 
+        :class="elem.class"
+      ) 
+        span {{ elem.description }}
+      li(
+        v-else-if="elem.type == 'decor'" 
+        :class="elem.class"
+      )
+      li(
+        v-else-if="elem.type == 'art'" 
+        :class="elem.class"
+        :title="elem.author"
+      )
 
 </template>
 
 <script>
 
 export default {
-  props: {
-    items: {
-      type: Array,
-      required: false,
-    },
-  },
   data() {
     return {
       gallery: []
     }
   },
-  watch: {
-    items() {
-      this.items.forEach((item) => {
-        if(item.description.length > 120) return item.type = "large-item"
-        if(item.description.length > 50) return item.type = "middle-item"
-        return item.type = "small-item"
+  async created() {
+    const items = (await import('../assets/resources/items.json')).default
+    const decors = (await import('../assets/resources/decors.json')).default
+    const arts = (await import('../assets/resources/arts.json')).default
+    this.refactoring(items, decors, arts)
+  },
+  methods:{
+    random(min, max){
+      return Math.floor(Math.random()*(max-min)+min)
+    },
+    refactoring(items, decors, arts){
+
+      // ДОБАВЛЕНИЕ ТИПА ITEM
+      // ДОБАВЛЕНИЕ ТРЕХТИПОВОГО-КЛАССА
+      items.forEach((item) => {
+        item.type = "item"
+        if(item.description.length > 120) return item.class = ["large-item", "item"]
+        if(item.description.length > 50) return item.class = ["middle-item", "item"]
+        return item.class = ["small-item", "item"]
       })
-      this.gallery = this.items
-    }
+
+      // ДОБАВЛЕНИЕ ТИПА DECOR
+      decors.forEach((decor) => {
+        decor.type = "decor"
+        return decor.class = ["decor"]
+      })
+
+      // ДОБАВЛЕНИЕ ТИПА ART
+      arts.forEach((art) => {
+        art.type = "art"
+        return art.class = ["art"]
+      })
+
+      const res = []
+      const shiftD = Math.floor(items.length/(decors.length))
+      const shiftA = Math.floor(items.length/(arts.length))
+      for(let i = 0, d = 0, a = 0; i < items.length; i++){
+        res.push(items[i])
+        if((i+1)%shiftD==0 && decors[d])
+          res.push(decors[d++])
+        if((i+1)%shiftA==0 && arts[a])
+          res.push(arts[a++])
+      }
+      this.gallery = res
+    },
   }
 }
 
@@ -66,8 +109,14 @@ li
 .large-item
   background: red
 
+.item
+  border-radius: 10px
+
 .decor
   border-radius: 50%
   background: blue
+
+.art
+  background: black
 
 </style>
