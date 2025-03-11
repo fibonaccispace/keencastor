@@ -1,7 +1,8 @@
 <template lang="pug">
 
 .header
-  .logotype keencastor
+  .logotype 
+    span keencastor
   p.description 
     | a&nbsp;site about coding adventures, interesting tasks, 
     | quotes from books, pet projects, images, visualizations, 
@@ -10,6 +11,7 @@
   p.description 
     | write here for your ideas&nbsp;&mdash; 
     a(href="mailto:box@keencastor.ru").email box@keencastor.ru
+  .statistic statistic graph
   input(placeholder="send here your ideas").ideas
 
 </template>
@@ -22,6 +24,8 @@
   // background: green
   margin: 0 auto
   width: 50%
+  @media(max-width: 1440px)
+    width: 60%
   @media(max-width: 1024px)
     width: 70%
   @media(max-width: 768px)
@@ -30,6 +34,18 @@
 .logotype
   text-align: center
   font-size: 2rem
+  span
+    cursor: pointer
+    &:hover
+      color: blue
+
+.statistic
+  height: 3rem
+  background: #eee
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #aaa
 
 .ideas
   width: 100%

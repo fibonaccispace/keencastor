@@ -1,12 +1,20 @@
 <template lang="pug">
 .footer
-    span ©&nbsp;2021–2025&nbsp;keencastor 
+  span ©&nbsp;{{startYear}}-{{currentYear}}&nbsp;keencastor 
 </template>
 
 <script>
+export default{
+  data(){
+    return{
+      startYear: '2000',
+      currentYear: new Date().getFullYear()
+    }
+  },
+}
 </script>
 
 <style scoped lang="sass">
 .footer
-    text-align: center
+  text-align: center
 </style>
