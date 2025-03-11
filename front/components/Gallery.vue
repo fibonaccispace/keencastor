@@ -2,7 +2,7 @@
 
 .gallery
   ul
-    a(v-for="elem in gallery" href="#")
+    a(v-for="elem in gallery" :href="elem.link")
       li(
         v-if="elem.type == 'item'" 
         :class="elem.class"
