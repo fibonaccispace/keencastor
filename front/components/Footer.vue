@@ -7,4 +7,6 @@
 </script>
 
 <style scoped lang="sass">
+.footer
+    text-align: center
 </style>

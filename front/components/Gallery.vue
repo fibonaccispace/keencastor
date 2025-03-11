@@ -1,27 +1,14 @@
 <template lang="pug">
-
 .gallery
   ul
-    a(v-for="elem in gallery" :href="elem.link")
-      li(
-        v-if="elem.type == 'item'" 
-        :class="elem.class"
-      ) 
-        span {{ elem.description }}
-      li(
-        v-else-if="elem.type == 'decor'" 
-        :class="elem.class"
-      )
-      li(
-        v-else-if="elem.type == 'art'" 
-        :class="elem.class"
-        :title="elem.author"
-      )
-
+    a(v-for="item in gallery" :href="item.link")
+      li(v-if="item.type == 'item'")
+        Item(:item="item")
+      li(v-else-if="item.type == 'decor'" :class="item.class")
+      li(v-else-if="item.type == 'art'" :class="item.class" :title="item.author")
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -44,9 +31,21 @@ export default {
       // ДОБАВЛЕНИЕ ТРЕХТИПОВОГО-КЛАССА
       items.forEach((item) => {
         item.type = "item"
-        if(item.description.length > 120) return item.class = ["large-item", "item"]
-        if(item.description.length > 50) return item.class = ["middle-item", "item"]
-        return item.class = ["small-item", "item"]
+        if(item.description.length > 120) {
+          item.subtype = 'large'
+          item.class = ["large-item", "item"]
+          return item
+        }
+        else if(item.description.length > 50) {
+          item.subtype = 'middle'
+          item.class = ["middle-item", "item"]
+          return item
+        }
+        else{
+          item.subtype = 'small'
+          item.class = ["small-item", "item"]
+          return item
+        }
       })
 
       // ДОБАВЛЕНИЕ ТИПА DECOR
@@ -75,7 +74,6 @@ export default {
     },
   }
 }
-
 </script>
 
 <style scoped lang="sass">
@@ -95,28 +93,19 @@ ul
     column-count: 1
 
 li
-  background: #aaa
-  aspect-ratio: 1/1
+  background: rgba(0, 256, 0, 0.1)
   break-inside: avoid
-  margin-bottom: 1rem
-
-.small-item
-  background: yellow
-
-.middle-item
-  background: orange
-
-.large-item
-  background: red
-
-.item
-  border-radius: 10px
+  margin-bottom: 2rem
 
 .decor
+  aspect-ratio: 1/1
   border-radius: 50%
   background: blue
+  opacity: .1
 
 .art
+  aspect-ratio: 1/1
   background: black
+  opacity: .1
 
 </style>

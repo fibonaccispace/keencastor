@@ -93,7 +93,7 @@
     "title": "L-system",
     "description": "recursive tree generation",
     "image": "public/images/l-system.png",
-    "link": "lsystem"
+    "link": "l-system"
   },
   {
     "title": "Chladni Patterns",
@@ -112,12 +112,6 @@
     "description": "generation of a pseudo three-dimensional canvas of heights, creating an image of the surface and biomes",
     "image": "public/images/proceed22.png",
     "link": "proceed-3d"
-  },
-  {
-    "title": "PI approximation",
-    "description": "approximation of PI, which is calculated by dividing the total number of circles by the number of circles inside the circle, multiplied by 4",
-    "image": "public/images/pi.png",
-    "link": "pi-approximation-1"
   },
   {
     "title": "Nuclear reaction",

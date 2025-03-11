@@ -15,6 +15,7 @@ const router = createRouter({
     { path: '/flappy-ai', component: import('../pages/FlappyAI.vue'), },
     { path: '/maxwell-boltzmann', component: import('../pages/MaxwellBoltzmann.vue'), },
     { path: '/aurora-borealis', component: import('../pages/AuroraBorealis.vue'), },
+    { path: '/l-system', component: import('../pages/LSystem.vue'), },
     { path: '/trees', component: import('../pages/Trees.vue'), },
     { path: '/lamp', component: import('../pages/Lamp.vue'), },
     { path: '/julia-set', component: import('../pages/JuliaSet.vue'), },
