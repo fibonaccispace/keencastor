@@ -1,6 +1,8 @@
 <template lang="pug">
   .large-item
-    .title(v-html="item.title")
+    .title-wrapper
+      .title(v-html="item.title")
+      .number {{item.number}}
     .icon-description-wrapper
       .preview
         img(:src="tempImagePath")
@@ -29,7 +31,7 @@ export default{
       position: relative
       flex-grow: 1
       img
-        z-index: -1
+        z-index: -5
         user-select: none
         pointer-events: none
         position: absolute

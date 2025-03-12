@@ -29,8 +29,10 @@ export default {
 
       // ДОБАВЛЕНИЕ ТИПА ITEM
       // ДОБАВЛЕНИЕ ТРЕХТИПОВОГО-КЛАССА
-      items.forEach((item) => {
+      // ДОБАВЛЕНИЕ НОМЕРА
+      items.forEach((item, index) => {
         item.type = "item"
+        item.number = index+1
         if(item.description.length > 120) {
           item.subtype = 'large'
           item.class = ["large-item", "item"]
@@ -78,11 +80,23 @@ export default {
 
 <style lang="sass">
 .gallery
+  .title-wrapper
+    position: relative
+    margin-bottom: .5rem
+  .number
+    z-index: -1
+    position: absolute
+    top: 0
+    left: 0
+    transform: translate(-50%,-60%)
+    font-size: 2rem
+    font-style: italic
+    opacity: .1
   .title
     font-size: var(--fsize-project-title)
     font-weight: 600
     line-height: 95%
-    margin-bottom: .5rem
+    text-shadow: 0 0 .5rem var(--color-text-invert)
   .description
     text-shadow: 0 0 .5rem var(--color-text-invert)
 </style>
@@ -106,7 +120,7 @@ ul
 li
   // background: rgba(0, 256, 0, 0.5)
   break-inside: avoid
-  margin-bottom: 2rem
+  margin-bottom: 3rem
 
 .decor
   aspect-ratio: 1/1

@@ -1,7 +1,9 @@
 <template lang="pug">
   .middle-item
     .content
-      .title(v-html="item.title")
+      .title-wrapper
+        .title(v-html="item.title")
+        .number {{item.number}}
       .description(v-html="item.description")
     .preview
       img(:src="tempImagePath")
@@ -28,7 +30,7 @@ export default{
     position: relative
     flex-grow: 1
     img
-      z-index: -1
+      z-index: -5
       user-select: none
       pointer-events: none
       position: absolute
