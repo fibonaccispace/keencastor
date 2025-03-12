@@ -33,7 +33,7 @@
 
 .logotype
   text-align: center
-  font-size: 2rem
+  font-size: var(--fsize-logo)
   span
     cursor: pointer
     &:hover

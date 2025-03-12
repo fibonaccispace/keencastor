@@ -1,7 +1,7 @@
 <template lang="pug">
   .large-item
     .preview
-      img(src="../../public/images/assist.png")
+      img(src="/public/images/assist.png")
     .content
       p.title {{item.title}}
       p {{item.description}}
