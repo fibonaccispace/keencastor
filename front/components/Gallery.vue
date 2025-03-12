@@ -6,6 +6,7 @@
         Item(:item="item")
       li(v-else-if="item.type == 'decor'" :class="item.class")
       li(v-else-if="item.type == 'art'" :class="item.class" :title="item.author")
+        img(:src="item.path" width="100%")
 </template>
 
 <script>
@@ -128,8 +129,9 @@ li
   opacity: .1
 
 .art
+  display: flex
+  justify-content: center
+  align-items: center
   aspect-ratio: 1/1
-  background: black
-  opacity: .1
 
 </style>
