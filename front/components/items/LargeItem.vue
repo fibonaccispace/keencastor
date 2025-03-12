@@ -5,7 +5,8 @@
       .number {{item.number}}
     .icon-description-wrapper
       .preview
-        img(:src="tempImagePath")
+        img(:src="tempImagePath.low")
+        img(:src="tempImagePath.high")
       .description(v-html="item.description")
 </template>
 
@@ -16,7 +17,10 @@ export default{
     tempImagePath(){
       const paths = ['assist', 'bong', 'cola', 'hz', 'smile']
       const rnd = paths[Math.floor(Math.random()*paths.length)]
-      return `/public/images/${rnd}.png`
+      return{
+        low: `/public/images/${rnd}_low.png`,
+        high: `/public/images/${rnd}.png`
+      }
     }
   }
 }
