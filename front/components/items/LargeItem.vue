@@ -1,40 +1,45 @@
 <template lang="pug">
   .large-item
-    .preview
-      img(src="/public/images/assist.png")
-    .content
-      p.title {{item.title}}
-      p {{item.description}}
+    .title(v-html="item.title")
+    .icon-description-wrapper
+      .preview
+        img(:src="tempImagePath")
+      .description(v-html="item.description")
 </template>
 
 <script>
 export default{
-  props: ['item']
+  props: ['item'],
+  computed:{
+    tempImagePath(){
+      const paths = ['assist', 'bong', 'cola', 'hz', 'smile']
+      const rnd = paths[Math.floor(Math.random()*paths.length)]
+      return `/public/images/${rnd}.png`
+    }
+  }
 }
 </script>
 
 <style scoped lang="sass">
 .large-item
   position: relative
-  display: flex
-.preview
-  flex-grow: 1
-  img
-    z-index: -1
-    user-select: none
-    pointer-events: none
-    position: absolute
-    top: 0
-    left: 0
-    transform: translate(-30%,-10%)
-    width: 200px
-    @media(max-width: 768px)
-      transform: translate(-20%,-10%)
-.content
-  width: 60%
-  @media(max-width: 768px)
-    width: 70%
-  .title
-    font-size: 1.2rem
-    font-weight: 600
+  .icon-description-wrapper
+    display: flex
+    .preview
+      position: relative
+      flex-grow: 1
+      img
+        z-index: -1
+        user-select: none
+        pointer-events: none
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%, 0)
+        max-width: var(--size-large-preview)
+        max-height: var(--size-large-preview)
+    .description
+      width: 60%
+      @media(max-width: 768px)
+        width: 70%
 </style>

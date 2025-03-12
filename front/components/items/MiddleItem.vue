@@ -1,17 +1,42 @@
 <template lang="pug">
   .middle-item
     .content
-      p {{item.title}}
-      p {{item.description}}
+      .title(v-html="item.title")
+      .description(v-html="item.description")
+    .preview
+      img(:src="tempImagePath")
 </template>
 
 <script>
 export default{
-  props: ['item']
+  props: ['item'],
+  computed:{
+    tempImagePath(){
+      const paths = ['assist', 'bong', 'cola', 'hz', 'smile']
+      const rnd = paths[Math.floor(Math.random()*paths.length)]
+      return `/public/images/${rnd}.png`
+    }
+  }
 }
 </script>
 
 <style scoped lang="sass">
 .middle-item
-  // background: orange
+  position: relative
+  display: flex
+  .preview
+    position: relative
+    flex-grow: 1
+    img
+      z-index: -1
+      user-select: none
+      pointer-events: none
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      max-width: var(--size-middle-preview)
+      max-height: var(--size-middle-preview)
+  .content
+    width: 60%
 </style>

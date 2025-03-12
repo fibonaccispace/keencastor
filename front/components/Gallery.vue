@@ -76,6 +76,17 @@ export default {
 }
 </script>
 
+<style lang="sass">
+.gallery
+  .title
+    font-size: var(--fsize-project-title)
+    font-weight: 600
+    line-height: 95%
+    margin-bottom: .5rem
+  .description
+    text-shadow: 0 0 .5rem var(--color-text-invert)
+</style>
+
 <style scoped lang="sass">
 
 ul
@@ -93,13 +104,12 @@ ul
     column-count: 1
 
 li
-  background: rgba(0, 256, 0, 0.1)
+  // background: rgba(0, 256, 0, 0.5)
   break-inside: avoid
   margin-bottom: 2rem
 
 .decor
   aspect-ratio: 1/1
-  border-radius: 50%
   background: blue
   opacity: .1
 
