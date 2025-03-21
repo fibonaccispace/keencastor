@@ -5,7 +5,7 @@
         img(:src="tempImagePath")
         .title-wrapper
           .title(v-html="item.title")
-          .number {{item.number}}
+          //- .number {{item.number}}
         .description(v-html="item.description")
 </template>
 

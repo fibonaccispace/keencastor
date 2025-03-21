@@ -109,8 +109,6 @@ ul
   list-style-type: none
   counter-reset: section
 
-  @media(max-width: 1440px)
-    column-count: 4
   @media(max-width: 1024px)
     column-count: 3
   @media(max-width: 768px)

@@ -21,7 +21,6 @@
 
 <style scoped lang="sass">
 .header
-  // background: green
   margin: 0 auto
   width: 50%
   @media(max-width: 1440px)

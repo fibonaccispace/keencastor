@@ -2,10 +2,10 @@
   .large-item
     .title-wrapper
       .title(v-html="item.title")
-      .number {{item.number}}
+      //- .number {{item.number}}
     .icon-description-wrapper
       .preview
-        img(:src="tempImagePath.low")
+        //- img(:src="tempImagePath.low")
         img(:src="tempImagePath.high")
       .description(v-html="item.description")
 </template>
