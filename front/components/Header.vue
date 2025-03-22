@@ -36,6 +36,9 @@
     cursor: pointer
     &:hover
       color: blue
+  
+.description
+  margin-bottom: 1rem
 
 .statistic
   height: 3rem
@@ -44,7 +47,13 @@
   justify-content: center
   align-items: center
   color: #aaa
+  margin-bottom: 1rem
 
 .input
+  border: 1px solid rgba(0, 0, 0, 0.1)
+  outline: none
   width: 100%
+  padding: .5rem .8rem
+  body:has(&:focus)
+    opacity: 0 !important
 </style>
