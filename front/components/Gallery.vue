@@ -95,7 +95,7 @@ export default {
     opacity: .1
   .title
     font-size: var(--fsize-project-title)
-    font-weight: 600
+    font-family: 'Inter-B', Arial, sans-serif
     line-height: 95%
     text-shadow: 0 0 .5rem var(--color-text-invert)
   .description
@@ -103,12 +103,10 @@ export default {
 </style>
 
 <style scoped lang="sass">
-
 ul
   column-count: 5
   list-style-type: none
   counter-reset: section
-
   @media(max-width: 1024px)
     column-count: 3
   @media(max-width: 768px)
@@ -131,5 +129,4 @@ li
   justify-content: center
   align-items: center
   aspect-ratio: 1/1
-
 </style>

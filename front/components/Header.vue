@@ -8,11 +8,8 @@
     | quotes from books, pet projects, images, visualizations, 
     | generatives, web-games, interactive elements, mathematical 
     | funs, facts about numbers, photos, installations, art objects.
-  p.description 
-    | write here for your ideas&nbsp;&mdash; 
-    a(href="mailto:box@keencastor.ru").email box@keencastor.ru
   .statistic statistic graph
-  input(placeholder="send here your ideas").ideas
+  input(placeholder="send here your ideas").input
 
 </template>
 
@@ -31,6 +28,7 @@
     width: 100%
 
 .logotype
+  margin-bottom: 1rem
   text-align: center
   font-size: var(--fsize-logo)
   span
@@ -46,6 +44,6 @@
   align-items: center
   color: #aaa
 
-.ideas
+.input
   width: 100%
 </style>
