@@ -4,9 +4,9 @@
     a(v-for="item in gallery" :href="item.link")
       li(v-if="item.type == 'item'")
         Item(:item="item")
-      li(v-else-if="item.type == 'decor'" :class="item.class")
-      li(v-else-if="item.type == 'art'" :class="item.class" :title="item.author")
-        img(:src="item.path" width="100%")
+      li(v-else-if="item.type == 'decor'").decor
+      li(v-else-if="item.type == 'art'").art
+        img(:src="item.path")
 </template>
 
 <script>
@@ -35,33 +35,21 @@ export default {
         item.type = "item"
         item.number = index+1
         if(item.description.length > 120) {
-          item.subtype = 'large'
-          item.class = ["large-item", "item"]
-          return item
+          return item.subtype = 'large'
         }
         else if(item.description.length > 50) {
-          item.subtype = 'middle'
-          item.class = ["middle-item", "item"]
-          return item
+          return item.subtype = 'middle'
         }
         else{
-          item.subtype = 'small'
-          item.class = ["small-item", "item"]
-          return item
+          return item.subtype = 'small'
         }
       })
 
       // ДОБАВЛЕНИЕ ТИПА DECOR
-      decors.forEach((decor) => {
-        decor.type = "decor"
-        return decor.class = ["decor"]
-      })
+      decors.forEach((decor) => { return decor.type = "decor" })
 
       // ДОБАВЛЕНИЕ ТИПА ART
-      arts.forEach((art) => {
-        art.type = "art"
-        return art.class = ["art"]
-      })
+      arts.forEach((art) => { return art.type = "art" })
 
       const res = []
       const shiftD = Math.floor(items.length/(decors.length))
@@ -129,4 +117,6 @@ li
   justify-content: center
   align-items: center
   aspect-ratio: 1/1
+  img
+    width: 60%
 </style>

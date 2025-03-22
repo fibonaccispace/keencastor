@@ -24,6 +24,7 @@ export default{
 
 <style scoped lang="sass">
 .small-item
+  padding: 1rem 0
   position: relative
   .preview
     position: relative
