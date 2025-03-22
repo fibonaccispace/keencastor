@@ -7,6 +7,7 @@
       li(v-else-if="item.type == 'decor'").decor
       li(v-else-if="item.type == 'art'").art
         img(:src="item.path")
+        a(:href="`https://www.instagram.com/${item.author}`" target="blank").author @{{item.author}}
 </template>
 
 <script>
@@ -113,10 +114,24 @@ li
   opacity: .1
 
 .art
+  position: relative
   display: flex
   justify-content: center
   align-items: center
   aspect-ratio: 1/1
   img
+    outline: 10px solid white
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5)
     width: 60%
+  .author
+    position: absolute
+    bottom: calc(20% - 10px)
+    left: 50%
+    transform: translate(-50%, 100%)
+    font-size: 0.8rem
+    padding: 5px 8px
+    opacity: 0.5
+    transition: .3s
+    &:hover
+      opacity: 1
 </style>
