@@ -9,7 +9,7 @@
     | generatives, web-games, interactive elements, mathematical 
     | funs, facts about numbers, photos, installations, art objects.
   .statistic statistic graph
-  input(placeholder="send here your ideas").input
+  input(placeholder="write here your ideas").input
 
 </template>
 

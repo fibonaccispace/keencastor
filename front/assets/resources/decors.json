@@ -1,50 +1,11 @@
 [
   {
-    "id": "decor_now",
-    "style": {
-      "width": 290,
-      "height": 120,
-      "justifyContent": "flex-end"
-    } 
+    "component": "NowDecor"
   },
   {
-    "id": "decor_now",
-    "style": {
-      "width": 290,
-      "height": 120,
-      "justifyContent": "flex-end"
-    } 
+    "component": "FlowerDecor"
   },
   {
-    "id": "decor_now",
-    "style": {
-      "width": 290,
-      "height": 120,
-      "justifyContent": "flex-end"
-    } 
-  },
-  {
-    "id": "decor_now",
-    "style": {
-      "width": 290,
-      "height": 120,
-      "justifyContent": "flex-end"
-    } 
-  },
-  {
-    "id": "decor_now",
-    "style": {
-      "width": 290,
-      "height": 120,
-      "justifyContent": "flex-end"
-    } 
-  },
-  {
-    "id": "decor_now",
-    "style": {
-      "width": 290,
-      "height": 120,
-      "justifyContent": "flex-end"
-    } 
+    "component": "WaveDecor"
   }
 ]

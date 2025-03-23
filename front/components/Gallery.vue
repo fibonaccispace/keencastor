@@ -5,6 +5,7 @@
       li(v-if="item.type == 'item'")
         Item(:item="item")
       li(v-else-if="item.type == 'decor'").decor
+        Decoration(:item="item")
       li(v-else-if="item.type == 'art'").art
         img(:src="item.path")
         a(:href="`https://www.instagram.com/${item.author}`" target="blank").author @{{item.author}}
@@ -109,9 +110,9 @@ li
   margin-bottom: 3rem
 
 .decor
-  aspect-ratio: 1/1
-  background: blue
-  opacity: .1
+  outline: 1px dashed black
+  display: flex
+  justify-content: center
 
 .art
   position: relative
