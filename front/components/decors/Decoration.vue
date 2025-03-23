@@ -1,5 +1,5 @@
 <template lang="pug">
-    component(:is="item.component")
+    component(:is="item.component" :style="item.style")
 </template>
 
 <script>

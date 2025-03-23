@@ -110,7 +110,7 @@ li
   margin-bottom: 3rem
 
 .decor
-  outline: 1px dashed black
+  // outline: 1px dashed black
   display: flex
   justify-content: center
 
@@ -124,17 +124,18 @@ li
     user-select: none
     pointer-events: none
     outline: 10px solid white
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5)
+    box-shadow: 0 3px 10px 5px rgba(0, 0, 0, 0.5)
     width: 60%
   .author
     position: absolute
-    bottom: calc(20% - 10px)
+    bottom: calc(20% - 15px)
     left: 50%
     transform: translate(-50%, 100%)
     font-size: 0.8rem
     padding: 5px 8px
     opacity: 0.5
     transition: .3s
-    &:hover
+    cursor: alias
+    &:hover 
       opacity: 1
 </style>

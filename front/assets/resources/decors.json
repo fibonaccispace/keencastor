@@ -6,6 +6,10 @@
     "component": "FlowerDecor"
   },
   {
-    "component": "WaveDecor"
+    "component": "WaveDecor",
+    "style":{
+      "backgroundColor": "rgb(246, 197, 229)",
+      "borderRadius": "5px"
+    }
   }
 ]
