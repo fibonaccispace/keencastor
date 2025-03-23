@@ -53,7 +53,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1)
   outline: none
   width: 100%
-  padding: .5rem .8rem
+  padding: .5rem .7rem
   body:has(&:focus)
     opacity: 0 !important
 </style>

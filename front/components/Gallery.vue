@@ -120,6 +120,8 @@ li
   align-items: center
   aspect-ratio: 1/1
   img
+    user-select: none
+    pointer-events: none
     outline: 10px solid white
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5)
     width: 60%
