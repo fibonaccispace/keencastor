@@ -29,7 +29,13 @@ export default {
     }
   },
   mounted() {
+    const dpr = window.devicePixelRatio || 1
+    this.$refs.canvas.width = this.width * dpr
+    this.$refs.canvas.height = this.height * dpr
+    this.$refs.canvas.style.width = this.width+'px'
+    this.$refs.canvas.style.height = this.height+'px'
     this.context = this.$refs.canvas.getContext('2d')
+    this.context.scale(dpr, dpr)
     requestAnimationFrame(this.animate)
   },
   methods: {
