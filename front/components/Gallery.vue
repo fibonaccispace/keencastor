@@ -6,6 +6,7 @@
         Item(:item="item")
       li(v-else-if="item.type == 'decor'").decor
         Decoration(:item="item")
+        .interactive(v-if="item.interactive")
       li(v-else-if="item.type == 'art'").art
         img(:src="item.path")
         a(:href="`https://www.instagram.com/${item.author}`" target="blank").author @{{item.author}}
@@ -85,11 +86,12 @@ export default {
     opacity: .1
   .title
     font-size: var(--fsize-project-title)
-    font-family: 'Inter-B', Arial, sans-serif
+    font-family: 'Coolvetica', Arial, sans-serif
     line-height: 95%
     text-shadow: 0 0 .5rem var(--color-text-invert)
   .description
     text-shadow: 0 0 .5rem var(--color-text-invert)
+    line-height: 115%
 </style>
 
 <style scoped lang="sass">
@@ -111,8 +113,24 @@ li
 
 .decor
   // outline: 1px dashed black
+  position: relative
   display: flex
   justify-content: center
+  .interactive
+    position: absolute
+    right: 0
+    bottom: 0
+    transform: translate(-40%, 70%)
+
+    pointer-events: none
+    user-select: none
+
+    width: 30px
+    height: 30px
+    background-image: url('images/pointinghand.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 150% 150%
 
 .art
   position: relative

@@ -1,5 +1,5 @@
 <template lang="pug">
-    canvas(ref="canvas" :width="this.width", :height="this.height")
+  canvas(ref="canvas" :width="this.width", :height="this.height")
 </template>
 
 <script>
@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 canvas
-    flex-shrink: 0
+  flex-shrink: 0
 </style>

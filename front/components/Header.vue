@@ -31,7 +31,7 @@
   margin-bottom: 1rem
   text-align: center
   font-size: var(--fsize-logo)
-  font-family: 'Inter-B', Arial, sans-serif
+  font-family: 'Coolvetica', Arial, sans-serif
   span
     cursor: pointer
     &:hover

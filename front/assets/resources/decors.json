@@ -1,12 +1,15 @@
 [
   {
-    "component": "NowDecor"
+    "component": "NowDecor",
+    "interactive": false
   },
   {
-    "component": "FlowerDecor"
+    "component": "FlowerDecor",
+    "interactive": true
   },
   {
     "component": "WaveDecor",
+    "interactive": false,
     "style":{
       "backgroundColor": "rgb(246, 197, 229)",
       "borderRadius": "5px"

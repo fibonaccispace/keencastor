@@ -1,6 +1,6 @@
 :root
-  --fsize-logo: 2rem
-  --fsize-project-title: 1.6rem
+  --fsize-logo: 3rem
+  --fsize-project-title: 2rem
   --color-text: black
   --color-text-invert: white
   
@@ -25,6 +25,11 @@ body[data-theme="dark"]
   padding: 0
   font-weight: normal
 
+::selection
+  background-color: black
+  color: white
+
+
 html, body
   font-family: 'Inter-R', Arial, sans-serif
   font-size: 14px
@@ -48,5 +53,11 @@ a
 @font-face 
   font-family: 'Inter-R'
   src: url('assets/fonts/Inter-Regular.otf') format('opentype'), url('assets/fonts/Inter-Regular.ttf') format('truetype'), url('assets/fonts/Inter-Regular.woff2') format('woff2')
+  font-weight: normal
+  font-style: normal
+
+@font-face 
+  font-family: 'Coolvetica'
+  src: url('assets/fonts/coolveticaRg.ttf') format('truetype')
   font-weight: normal
   font-style: normal
