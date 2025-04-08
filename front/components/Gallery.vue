@@ -2,7 +2,7 @@
 .gallery
   ul
     a(v-for="item in gallery" :href="item.link")
-      li(v-if="item.type == 'item'")
+      li(v-if="item.type == 'item'").item
         Item(:item="item")
       li(v-else-if="item.type == 'decor'").decor
         Decoration(:item="item")
@@ -84,11 +84,14 @@ export default {
     font-size: 2rem
     font-style: italic
     opacity: .1
+  .item:hover .title
+    color: blue
   .title
     font-size: var(--fsize-project-title)
     font-family: 'Coolvetica', Arial, sans-serif
     line-height: 95%
     text-shadow: 0 0 .5rem var(--color-text-invert)
+    transition: .3s
   .description
     text-shadow: 0 0 .5rem var(--color-text-invert)
     line-height: 115%
