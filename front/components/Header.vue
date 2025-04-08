@@ -34,6 +34,7 @@
   font-family: 'Coolvetica', Arial, sans-serif
   span
     cursor: pointer
+    transition: .3s
     &:hover
       color: blue
   

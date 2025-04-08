@@ -3,7 +3,7 @@
     "title": "Neural network",
     "description": "the simplest perceptron capable of classifying points of two classes on a plane. by the way, you can switch between different activation functions to explore the difference of dependency search",
     "image": "public/images/nn.png",
-    "link": "neuralnetwork"
+    "link": "neural-network"
   },
   {
     "title": "Notes",
@@ -21,13 +21,13 @@
     "title": "Flappy Bird AI",
     "description": "each bird has its own simple neural network with random weights. through natural selection and a genetic algorithm, the most successful birds pass their weights to the next generation with slight mutations, leading to correct behavior and jumping at the right moment",
     "image": "public/images/flappy.png",
-    "link": "flappy-ai"
+    "link": "flappy-bird-ai"
   },
   {
     "title": "Maxwell-Boltzmann distribution",
     "description": "distribution of the number of molecular speeds in a closed space",
     "image": "public/images/maxwell.png",
-    "link": "maxwell-boltzmann"
+    "link": "maxwell-boltzmann-distribution"
   },
   {
     "title": "Aurora borealis",
@@ -57,7 +57,7 @@
     "title": "Procedural generation",
     "description": "generating terrain by overlaying several noise maps. Perlin noise is not used, i use something else",
     "image": "public/images/proceed.png",
-    "link": "proceed-2d"
+    "link": "procedural-generation"
   },
   {
     "title": "Shader",
@@ -111,7 +111,7 @@
     "title": "Procedural generation 3D",
     "description": "generation of a pseudo three-dimensional canvas of heights, creating an image of the surface and biomes",
     "image": "public/images/proceed22.png",
-    "link": "proceed-3d"
+    "link": "procedural-generation-3d"
   },
   {
     "title": "Nuclear reaction",
@@ -123,6 +123,6 @@
     "title": "3D visualization",
     "description": "cellular automaton using the methods of convolutional neural networks - filters and activation functions. the example given uses a 3 by 3 filter with an inverted gaussian function",
     "image": "public/images/3d.png",
-    "link": "3d"
+    "link": "3d-visualization"
   }
 ]
