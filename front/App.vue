@@ -4,8 +4,16 @@
     Gallery
     Footer
   template(v-else)
+    a(href="/").back back
     RouterView
 </template>
+
+<style lang="sass">
+  .back
+    background: rgba(0,0,0,0.1)
+    width: fit-content
+    padding: 10px 16px
+</style>
 
 <script>
 export default {
