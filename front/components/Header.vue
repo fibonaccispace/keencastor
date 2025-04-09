@@ -9,7 +9,11 @@
     | generatives, web-games, interactive elements, mathematical 
     | funs, facts about numbers, photos, installations, art objects.
   //- .statistic statistic graph
-  input(placeholder="tap here your ideas").input
+  input(
+    placeholder="tap here your ideas"
+    @focus="focus"
+    @blur="blur"
+  ).input
   .choose
     .choose-item drawing machine
     .choose-item birth generator
@@ -24,13 +28,44 @@
 </template>
 
 <script>
+export default{
+  data() {
+    return {
+      chooseItems:[],
+      look: false,
+    }
+  },
+  mounted(){
+    this.$nextTick(()=>{
+      this.chooseItems = document.querySelectorAll('.choose-item')
+    })
+  },
+  methods:{
+    focus(){
+      this.look = true
+      this.chooseItems.forEach((item, index)=>{
+        setTimeout(()=>{
+          if(this.look){
+            item.style.opacity = 1
+          }
+        }, index*30)
+      })
+    },
+    blur(){
+      this.look = false
+      this.chooseItems.forEach((item)=>{
+        item.style.opacity = 0
+      })
+    }
+  }
+}
 </script>
 
 <style lang="sass">
 @media(min-width: 1025px)
   .header:has(.input:focus) + .gallery
     opacity: .7
-    transform: rotateX(10deg) scale(.9)
+    transform: rotateX(4deg) scale(.9)
     pointer-events: none
     user-select: none
   .header:has(.input:focus) .choose
@@ -84,15 +119,15 @@
 
 .choose
   padding-top: 1rem
-  opacity: 0
-  transition: .5s
   position: absolute
   width: 100%
   display: flex
   flex-wrap: wrap
   gap: .3rem
   .choose-item
+    transition: opacity .5s
+    opacity: 0
     padding: 8px 12px
     border-radius: 100px
-    background: rgba(0, 0, 0, 0.1)
+    background: rgba(0, 0, 0, 0.05)
 </style>

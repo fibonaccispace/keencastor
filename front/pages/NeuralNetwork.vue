@@ -1,10 +1,12 @@
 <template lang="pug">
-  span neural network
+  span.name Neural network
 </template>
 
 <style lang="sass" scoped>
-span
-  font-size: 5rem
+.name
+  font-size: 3rem
+  text-align: center
+  font-family: 'Coolvetica', Arial, sans-serif
 </style>
 
 <script>

@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       gallery: [],
-      spawndelay: 100,
+      spawndelay: 200,
     }
   },
   async created() {
@@ -32,7 +32,7 @@ export default {
     this.$nextTick(()=>{
       const items = document.querySelectorAll('ul .element')
       items.forEach((item, index)=>{
-        const delay = (index/items.length)*400
+        const delay = (index/items.length)*500
         setTimeout(()=>{
           item.style.opacity = 1
         },delay+this.spawndelay)
@@ -86,7 +86,7 @@ export default {
 
 <style lang="sass">
 .gallery
-  transition: .5s
+  transition: .6s cubic-bezier(0.45, 0.2, 0.35, 1)
   .element
     opacity: 0
     transition: .3s
