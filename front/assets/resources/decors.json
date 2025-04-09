@@ -5,7 +5,7 @@
   },
   {
     "component": "FlowerDecor",
-    "interactive": true
+    "interactive": false
   },
   {
     "component": "WaveDecor",
