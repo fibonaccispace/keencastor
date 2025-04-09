@@ -3,7 +3,7 @@
   .footer-gallery
     ul
       a(v-for="item in gallery" :href="item.link")
-        li(v-if="item.type == 'item'").item {{ item.title }}
+        li(v-if="item.type == 'item'").item {{ item.title.toLowerCase() }}
   span ©&nbsp;{{startYear}}-{{currentYear}}&nbsp;keencastor 
 </template>
 

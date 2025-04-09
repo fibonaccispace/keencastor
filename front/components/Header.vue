@@ -1,5 +1,4 @@
 <template lang="pug">
-
 .header
   .logotype 
     span keencastor
@@ -9,15 +8,34 @@
     | generatives, web-games, interactive elements, mathematical 
     | funs, facts about numbers, photos, installations, art objects.
   .statistic statistic graph
-  input(placeholder="write here your ideas").input
+  input(placeholder="tap here your ideas").input
+  .choose
+    .choose-item drawing machine
+    .choose-item birth generator
+    .choose-item kaleidoscope
+    .choose-item more arts
+    .choose-item interesting tasks
+    .choose-item photos
+    .choose-item web-games
+    .choose-item more decors
+    .choose-item facts about numbers
 
 </template>
 
 <script>
 </script>
 
+<style lang="sass">
+.header:has(.input:focus) + .gallery
+  transform: rotateX(10deg) scale(.9)
+  opacity: .7
+.header:has(.input:focus) .choose
+  opacity: 1
+</style>
+
 <style scoped lang="sass">
 .header
+  position: relative
   margin: 0 auto
   width: 50%
   @media(max-width: 1440px)
@@ -51,10 +69,26 @@
   margin-bottom: 1rem
 
 .input
-  border: 1px solid rgba(0, 0, 0, 0.1)
+  // border: 1px solid rgba(0, 0, 0, 0.1)
+  border: none
   outline: none
   width: 100%
-  padding: .5rem .7rem
+  // padding: .5rem .7rem
+  padding: .5rem 0
   body:has(&:focus)
     opacity: 0 !important
+
+.choose
+  padding-top: 1rem
+  opacity: 0
+  transition: .5s
+  position: absolute
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  gap: .3rem
+  .choose-item
+    padding: 8px 12px
+    border-radius: 100px
+    background: rgba(0, 0, 0, 0.1)
 </style>

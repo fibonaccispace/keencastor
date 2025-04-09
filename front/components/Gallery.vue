@@ -86,6 +86,7 @@ export default {
 
 <style lang="sass">
 .gallery
+  transition: .5s
   .element
     opacity: 0
     transition: .3s
