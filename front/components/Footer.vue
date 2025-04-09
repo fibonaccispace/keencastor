@@ -1,9 +1,9 @@
 <template lang="pug">
-.footer
-  //- .footer-gallery
-  //-   ul
-  //-     a(v-for="item in gallery" :href="item.link")
-  //-       li(v-if="item.type == 'item'").item {{ item.title }}
+.footer(ref="footer")
+  .footer-gallery
+    ul
+      a(v-for="item in gallery" :href="item.link")
+        li(v-if="item.type == 'item'").item {{ item.title }}
   span ©&nbsp;{{startYear}}-{{currentYear}}&nbsp;keencastor 
 </template>
 
@@ -21,6 +21,11 @@ export default {
     const decors = (await import('../assets/resources/decors.json')).default
     const arts = (await import('../assets/resources/arts.json')).default
     this.refactoring(items, decors, arts)
+    this.$nextTick(()=>{
+      setTimeout(()=>{
+        this.$refs.footer.style.opacity = 1
+      },100)
+    })
   },
   methods:{
     random(min, max){
@@ -70,6 +75,8 @@ export default {
 <style scoped lang="sass">
 .footer
   text-align: center
+  transition: .3s
+  opacity: 0
 
 .footer-gallery
   margin-bottom: 1rem
@@ -87,7 +94,6 @@ export default {
   li
     text-align: left
     break-inside: avoid
-    transition: .15s
     &:hover
       background: black
       color: white

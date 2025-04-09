@@ -1,7 +1,10 @@
 <template lang="pug">
 .gallery
   ul
-    a(v-for="item in gallery" :href="item.link")
+    a(
+      v-for="item in gallery" 
+      :href="item.link"
+    ).element
       li(v-if="item.type == 'item'").item
         Item(:item="item")
       li(v-else-if="item.type == 'decor'").decor
@@ -16,7 +19,8 @@
 export default {
   data() {
     return {
-      gallery: []
+      gallery: [],
+      spawndelay: 100,
     }
   },
   async created() {
@@ -24,6 +28,16 @@ export default {
     const decors = (await import('../assets/resources/decors.json')).default
     const arts = (await import('../assets/resources/arts.json')).default
     this.refactoring(items, decors, arts)
+
+    this.$nextTick(()=>{
+      const items = document.querySelectorAll('ul .element')
+      items.forEach((item, index)=>{
+        const delay = (index/items.length)*400
+        setTimeout(()=>{
+          item.style.opacity = 1
+        },delay+this.spawndelay)
+      })
+    })
   },
   methods:{
     random(min, max){
@@ -72,6 +86,9 @@ export default {
 
 <style lang="sass">
 .gallery
+  .element
+    opacity: 0
+    transition: .3s
   .title-wrapper
     position: relative
     margin-bottom: .5rem
