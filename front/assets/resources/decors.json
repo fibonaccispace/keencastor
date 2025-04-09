@@ -14,5 +14,9 @@
       "backgroundColor": "rgb(246, 197, 229)",
       "borderRadius": "5px"
     }
+  },
+  {
+    "component": "LineDecor",
+    "interactive": true
   }
 ]
