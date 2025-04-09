@@ -4,7 +4,7 @@
     span keencastor
   p.description 
     a(href="https://keencastor.ru/v1/" target="blank").link first version of the site
-    | , a&nbsp;site about coding adventures, interesting tasks, 
+    | , the&nbsp;site about coding adventures, interesting tasks, 
     | quotes from books, pet projects, images, visualizations, 
     | generatives, web-games, interactive elements, mathematical 
     | funs, facts about numbers, photos, installations, art objects.
