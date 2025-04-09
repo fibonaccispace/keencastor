@@ -17,6 +17,9 @@
   },
   {
     "component": "LineDecor",
-    "interactive": true
+    "interactive": true,
+    "style":{
+      "cursor": "pointer"
+    }
   }
 ]

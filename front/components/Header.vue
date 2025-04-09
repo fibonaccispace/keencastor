@@ -3,11 +3,12 @@
   .logotype 
     span keencastor
   p.description 
-    | a&nbsp;site about coding adventures, interesting tasks, 
+    a(href="https://keencastor.ru/v1/" target="blank").link first version of the site
+    | , a&nbsp;site about coding adventures, interesting tasks, 
     | quotes from books, pet projects, images, visualizations, 
     | generatives, web-games, interactive elements, mathematical 
     | funs, facts about numbers, photos, installations, art objects.
-  .statistic statistic graph
+  //- .statistic statistic graph
   input(placeholder="tap here your ideas").input
   .choose
     .choose-item drawing machine
