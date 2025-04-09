@@ -26,11 +26,12 @@
 </script>
 
 <style lang="sass">
-.header:has(.input:focus) + .gallery
-  transform: rotateX(10deg) scale(.9)
-  opacity: .7
-.header:has(.input:focus) .choose
-  opacity: 1
+@media(min-width: 1025px)
+  .header:has(.input:focus) + .gallery
+    transform: rotateX(10deg) scale(.9)
+    opacity: .7
+  .header:has(.input:focus) .choose
+    opacity: 1
 </style>
 
 <style scoped lang="sass">
