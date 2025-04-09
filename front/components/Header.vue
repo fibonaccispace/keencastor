@@ -28,8 +28,10 @@
 <style lang="sass">
 @media(min-width: 1025px)
   .header:has(.input:focus) + .gallery
-    transform: rotateX(10deg) scale(.9)
     opacity: .7
+    transform: rotateX(10deg) scale(.9)
+    pointer-events: none
+    user-select: none
   .header:has(.input:focus) .choose
     opacity: 1
 </style>

@@ -15,7 +15,7 @@ export default{
   props: ['item'],
   computed:{
     tempImagePath(){
-      const paths = ['assist', 'bong', 'cola', 'hz', 'smile']
+      const paths = ['assist', 'bong', 'cola', 'hz', 'smile', 'discord', 'ear', 'home', 'medusa', 'tail']
       const rnd = paths[Math.floor(Math.random()*paths.length)]
       return{
         low: `/public/images/${rnd}_low.png`,
