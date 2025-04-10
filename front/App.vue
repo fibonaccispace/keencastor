@@ -1,10 +1,10 @@
 <template lang="pug">
   template(v-if="isMain")
-    Header
-    Gallery
-    Footer
+    #main-container
+      Header
+      Gallery
+      Footer
   template(v-else)
-    a(href="/").back back
     RouterView
 </template>
 

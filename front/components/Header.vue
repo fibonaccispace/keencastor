@@ -3,7 +3,7 @@
   .logotype 
     span keencastor
   p.description 
-    a(href="https://keencastor.ru/v1/" target="blank").link first version of the site
+    a(href="https://keencastor.ru/v1/" target="blank").link old version of the site
     | , the&nbsp;site about coding adventures, interesting tasks, 
     | quotes from books, pet projects, images, visualizations, 
     | generatives, web-games, interactive elements, mathematical 
@@ -124,6 +124,8 @@ export default{
   display: flex
   flex-wrap: wrap
   gap: .3rem
+  @media(max-width: 1024px)
+    display: none
   .choose-item
     transition: opacity .5s
     opacity: 0
