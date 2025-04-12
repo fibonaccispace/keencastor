@@ -11,52 +11,49 @@
   //- .statistic statistic graph
   input(
     placeholder="tap here your ideas"
-    @focus="focus"
-    @blur="blur"
+    ref="input"
   ).input
-  .choose
-    .choose-item drawing machine
-    .choose-item birth generator
-    .choose-item kaleidoscope
-    .choose-item more arts
-    .choose-item interesting tasks
-    .choose-item photos
-    .choose-item web-games
-    .choose-item more decors
-    .choose-item facts about numbers
-
 </template>
 
 <script>
 export default{
   data() {
     return {
-      chooseItems:[],
-      look: false,
+      chooseIndex: 0,
+      chooseItems:[
+        'drawing machine',
+        'birth generator',
+        'kaleidoscope',
+        'more arts',
+        'interesting tasks',
+        'photos',
+        'web-games',
+        'more decors',
+        'facts about numbers',
+      ],
     }
   },
   mounted(){
-    this.$nextTick(()=>{
-      this.chooseItems = document.querySelectorAll('.choose-item')
-    })
+    window.addEventListener('scroll', this.scroll)
+    this.placeholder()
+    setInterval(()=>{
+      this.placeholder()
+    },5000)
+  },
+  beforeUnmount(){
+    window.removeEventListener('scroll', this.scroll)
   },
   methods:{
-    focus(){
-      this.look = true
-      this.chooseItems.forEach((item, index)=>{
-        setTimeout(()=>{
-          if(this.look){
-            item.style.opacity = 1
-          }
-        }, index*30)
-      })
+    placeholder(){
+      const choosed = this.chooseItems[(this.chooseIndex++)%this.chooseItems.length]
+      this.$refs.input.placeholder = `tap here your ideas: ${choosed}`
     },
-    blur(){
-      this.look = false
-      this.chooseItems.forEach((item)=>{
-        item.style.opacity = 0
-      })
-    }
+    scroll(){
+      const height = window.scrollY
+      if(height > 220){
+        this.$refs.input.blur()
+      }
+    },
   }
 }
 </script>
@@ -65,11 +62,9 @@ export default{
 @media(min-width: 1025px)
   .header:has(.input:focus) + .gallery
     opacity: .7
-    transform: rotateX(4deg) scale(.9)
+    transform: rotateX(3deg) scale(.9) translateY(-100px)
     pointer-events: none
     user-select: none
-  .header:has(.input:focus) .choose
-    opacity: 1
 </style>
 
 <style scoped lang="sass">
@@ -108,28 +103,8 @@ export default{
   margin-bottom: 1rem
 
 .input
-  // border: 1px solid rgba(0, 0, 0, 0.1)
   border: none
   outline: none
   width: 100%
-  // padding: .5rem .7rem
   padding: .5rem 0
-  body:has(&:focus)
-    opacity: 0 !important
-
-.choose
-  padding-top: 1rem
-  position: absolute
-  width: 100%
-  display: flex
-  flex-wrap: wrap
-  gap: .3rem
-  @media(max-width: 1024px)
-    display: none
-  .choose-item
-    transition: opacity .5s
-    opacity: 0
-    padding: 8px 12px
-    border-radius: 100px
-    background: rgba(0, 0, 0, 0.05)
 </style>

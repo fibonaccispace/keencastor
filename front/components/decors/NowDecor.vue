@@ -49,7 +49,10 @@ export default {
             new Point(-231, 10, this.random(0, 360)),
             new Point(-230, 89, this.random(0, 360))
         ],
-        colors: ['black', '#35fe02', 'red', '#0008ff', '#ff0095'],
+        colors: [
+          'black', '#35fe02', 'red', '#0008ff', '#ff0095',
+          '#71f79f', '#01110A', '#E84855', '#F75C03', '#6622CC'
+        ],
         color: null,
         shiftX: 3,
         shiftY: 4,
