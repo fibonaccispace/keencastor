@@ -2,7 +2,6 @@
   .large-item
     .title-wrapper
       .title(v-html="item.title")
-      //- .number {{item.number}}
     .icon-description-wrapper
       .preview
         //- img(:src="tempImagePath.low")

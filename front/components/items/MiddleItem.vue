@@ -3,7 +3,6 @@
     .content
       .title-wrapper
         .title(v-html="item.title")
-        //- .number {{item.number}}
       .description(v-html="item.description")
     .preview
       img(:src="tempImagePath")

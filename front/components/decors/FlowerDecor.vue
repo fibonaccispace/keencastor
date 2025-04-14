@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { useMainStore } from '@/store/main.js'
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min
 const radian = (degrees) => (-degrees - 180) * Math.PI / 180
 class Petal {
@@ -121,12 +122,14 @@ class MiddleCircle {
 export default {
   data() {
     return {
+      store: true,
       width: 180,
       height: 180,
       context: null,
     }
   },
   mounted() {
+    this.store = useMainStore()
     const dpr = window.devicePixelRatio || 1
     this.$refs.canvas.width = this.width * dpr
     this.$refs.canvas.height = this.height * dpr
@@ -157,6 +160,7 @@ export default {
     },
     animate() {
       requestAnimationFrame(this.animate)
+      if(!this.store.scripts) return
       this.context.clearRect(0, 0, this.width, this.height)
 
       this.flower.stem.set(this.context)
@@ -167,6 +171,7 @@ export default {
 		  this.flower.middle.change()  
     },
     changeFlower() {
+      if(!this.store.scripts) return
 		  this.flower.stem.target = new Stem(this.width,this.height)
 		  this.flower.petals.forEach((item,index)=>item.target=new Petal(index,60,'red',this.width,this.height))
 		  this.flower.middle.target = new MiddleCircle(this.width,this.height)

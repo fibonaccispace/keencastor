@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import { useMainStore } from '@/store/main.js'
+
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min
 const radian = (degrees) => (-degrees - 180) * Math.PI / 180
 const uniform = (min = 0, max = 1) => Math.random() * (max - min) + min
@@ -42,6 +44,7 @@ class Point {
 export default {
   data() {
     return {
+      store: true,
       width: 180,
       height: 180,
       pixel: 4,
@@ -49,6 +52,7 @@ export default {
     }
   },
   mounted() {
+    this.store = useMainStore()
     const dpr = window.devicePixelRatio || 1
     this.$refs.canvas.width = this.width * dpr
     this.$refs.canvas.height = this.height * dpr
@@ -62,6 +66,7 @@ export default {
       this.points.push(new Point(this.width, this.height, this.pixel))
 
     this.$refs.canvas.addEventListener('click', () => {
+      if(!this.store.scripts) return
       this.points.length = 0
       for (let i = 0; i < random(6,20); i++)
         this.points.push(new Point(this.width, this.height, this.pixel))
@@ -75,6 +80,7 @@ export default {
     },
     animate() {
       requestAnimationFrame(this.animate)
+      if(!this.store.scripts) return
       this.context.clearRect(0, 0, this.width, this.height)
 
       this.points.forEach((point, index, array) => {

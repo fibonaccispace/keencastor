@@ -18,10 +18,11 @@
     .options
       .option en
       .option light
-      .option scripts
+      .option(@click="toggleScripts" ref="scripts").active scripts
 </template>
 
 <script>
+import { useMainStore } from '@/store/main.js'
 export default{
   data() {
     return {
@@ -50,6 +51,15 @@ export default{
     window.removeEventListener('scroll', this.scroll)
   },
   methods:{
+    toggleScripts(){
+      const store = useMainStore()
+      store.scripts = store.scripts ? false : true
+      if(store.scripts){
+        this.$refs.scripts.classList.add('active')
+      }else{
+        this.$refs.scripts.classList.remove('active')
+      }
+    },
     placeholder(){
       const choosed = this.chooseItems[(this.chooseIndex++)%this.chooseItems.length]
       if(this.$refs.input){
@@ -119,7 +129,13 @@ export default{
 .options
   display: flex
   gap: .5rem
+  .option.active
+    background: black
+    color: white
+  .option.active:hover
+    background: rgba(0,0,0,.7)
   .option
+    user-select: none
     padding: .5rem .8rem
     background: rgba(0, 0, 0, .05)
     border-radius: 1rem

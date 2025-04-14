@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { useMainStore } from '@/store/main.js'
 class Item {
   constructor(x, y, type) {
     this.x = x
@@ -20,6 +21,7 @@ class Weight {
 export default {
   data() {
     return {
+      store: true,
       width: 180,
       height: 180,
       context: null,
@@ -29,6 +31,7 @@ export default {
     }
   },
   mounted() {
+    this.store = useMainStore()
     const dpr = window.devicePixelRatio || 1
     this.$refs.canvas.width = this.width * dpr
     this.$refs.canvas.height = this.height * dpr
@@ -82,6 +85,7 @@ export default {
     },
     animate() {
       requestAnimationFrame(this.animate)
+      if(!this.store.scripts) return
       this.context.clearRect(0, 0, this.width, this.height)
       const width = this.width / this.pixel
       const height = this.height / this.pixel

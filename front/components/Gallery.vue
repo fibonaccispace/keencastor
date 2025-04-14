@@ -87,7 +87,7 @@ export default {
 
 <style lang="sass">
 .gallery
-  transition: .6s cubic-bezier(0.45, 0.2, 0.35, 1)
+  transition: .6s cubic-bezier(0.6, 0.38, 0.3, 0.8)
   .element
     opacity: 0
     transform: scale(1.05)
@@ -95,15 +95,6 @@ export default {
   .title-wrapper
     position: relative
     margin-bottom: .5rem
-  .number
-    z-index: -1
-    position: absolute
-    top: 0
-    left: 0
-    transform: translate(-50%,-60%)
-    font-size: 2rem
-    font-style: italic
-    opacity: .1
   .item:hover .title
     color: blue
   .title
