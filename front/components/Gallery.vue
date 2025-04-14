@@ -108,10 +108,10 @@ export default {
     font-size: var(--fsize-project-title)
     font-family: 'Coolvetica', Arial, sans-serif
     line-height: 95%
-    text-shadow: 0 0 .5rem var(--color-text-invert)
+    text-shadow: 0 0 .5rem var(--white-color)
     transition: .3s
   .description
-    text-shadow: 0 0 .5rem var(--color-text-invert)
+    text-shadow: 0 0 .5rem var(--white-color)
     line-height: 115%
 </style>
 

@@ -3,7 +3,7 @@
   .logotype 
     span keencastor
   .description 
-    .block-title what kind
+    .block-title what's kind
     a(href="https://keencastor.ru/v1/" target="blank").link old version of the site
     | , the&nbsp;site about coding adventures, interesting tasks, 
     | quotes from books, pet projects, images, visualizations, 
@@ -18,8 +18,10 @@
     .block-title settings
     .options
       .option en
-      .option light
-      .option scripts
+      .option(@click="toggleTheme").active
+        span#theme light 
+        span#command cmd+b
+      .option(@click="toggleScripts").active scripts
 </template>
 
 <script>
@@ -42,6 +44,11 @@ export default{
   },
   mounted(){
     window.addEventListener('scroll', this.scroll)
+    const command = document.getElementById('command')
+    if(command){
+      command.innerText = navigator.userAgent.includes('Macintosh') ? 'cmd+b' : 'ctrl+b'
+    }
+
     this.placeholder()
     setInterval(()=>{
       this.placeholder()
@@ -61,6 +68,9 @@ export default{
         this.$refs.input.blur()
       }
     },
+    toggleTheme(){
+      this.$emit('toggleTheme')
+    }
   }
 }
 </script>
@@ -100,6 +110,11 @@ export default{
 .description, .input
   margin-bottom: 1.5rem
 
+#command
+  opacity: 0.5
+  @media(max-width: 1024px)
+    display: none
+
 .statistic
   height: 3rem
   background: #eee
@@ -118,14 +133,20 @@ export default{
 .options
   display: flex
   gap: .5rem
+  .option.active
+    background: var(--black-color)
+    color: var(--white-color)
+  .option.active:hover
+    background: var(--black-color-transparent-75)
   .option
+    user-select: none
     padding: .5rem .8rem
-    background: rgba(0, 0, 0, .05)
+    background: var(--black-color-transparent-05)
     border-radius: 1rem
     cursor: pointer
     transition: .6s
   .option:hover
-    background: rgba(0, 0, 0, 0.1)
+    background: var(--black-color-transparent-1)
     transition: .1s
   .option:active
     transform: scale(0.95)
@@ -134,11 +155,13 @@ export default{
   border: none
   outline: none
   width: 100%
-  border: 1px solid rgba(0, 0, 0, 0.1)
-  padding: .5rem .7rem
+  background: var(--white-color)
+  border: 1px solid var(--black-color-transparent-1)
+  padding: .5rem .8rem
   border-radius: 1rem
-  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.05)
-  transition: .3s
+  box-shadow: 0 3px 15px 0 var(--black-color-transparent-05)
+  transition: box-shadow .3s
+  font-size: 1rem
   &:focus
-    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.08)
+    box-shadow: 0 5px 30px 0 var(--black-color-transparent-05)
 </style>
