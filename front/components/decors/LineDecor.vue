@@ -44,6 +44,7 @@ class Point {
 export default {
   data() {
     return {
+      isFirstFrame: true,
       store: true,
       width: 180,
       height: 180,
@@ -80,7 +81,10 @@ export default {
     },
     animate() {
       requestAnimationFrame(this.animate)
-      if(!this.store.scripts) return
+      if(!this.isFirstFrame && !this.store.scripts){
+        return
+      }
+      this.isFirstFrame = false
       this.context.clearRect(0, 0, this.width, this.height)
 
       this.points.forEach((point, index, array) => {
