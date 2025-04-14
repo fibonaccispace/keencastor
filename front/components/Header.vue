@@ -53,7 +53,9 @@ export default{
   methods:{
     placeholder(){
       const choosed = this.chooseItems[(this.chooseIndex++)%this.chooseItems.length]
-      this.$refs.input.placeholder = `tap here your ideas: ${choosed}`
+      if(this.$refs.input){
+        this.$refs.input.placeholder = `tap here your ideas: ${choosed}`
+      }
     },
     scroll(){
       const height = window.scrollY
