@@ -4,13 +4,13 @@
     a(
       v-for="item in gallery" 
       :href="item.link"
-    ).element
-      li(v-if="item.type == 'item'").item
+    )
+      li(v-if="item.type == 'item'").item.element
         Item(:item="item")
-      li(v-else-if="item.type == 'decor'").decor
+      li(v-else-if="item.type == 'decor'").decor.element
         Decoration(:item="item")
         .interactive(v-if="item.interactive")
-      li(v-else-if="item.type == 'art'").art
+      li(v-else-if="item.type == 'art'").art.element
         img(:src="item.path")
         a(:href="`https://www.instagram.com/${item.author}`" target="blank").author @{{item.author}}
 </template>
@@ -35,6 +35,7 @@ export default {
         const delay = (index/items.length)*500
         setTimeout(()=>{
           item.style.opacity = 1
+          item.style.transform = 'scale(1)'
         },delay+this.spawndelay)
       })
     })
@@ -89,7 +90,8 @@ export default {
   transition: .6s cubic-bezier(0.45, 0.2, 0.35, 1)
   .element
     opacity: 0
-    transition: .3s
+    transform: scale(1.05)
+    transition: .5s .3s ease-out
   .title-wrapper
     position: relative
     margin-bottom: .5rem
