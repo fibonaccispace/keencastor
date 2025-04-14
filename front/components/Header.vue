@@ -1,7 +1,6 @@
 <template lang="pug">
 .header
-  .logotype 
-    span keencastor
+  .logotype keencastor
   .description 
     .block-title what kind
     a(href="https://keencastor.ru/v1/" target="blank").link old version of the site
@@ -89,15 +88,15 @@ export default{
     width: 100%
 
 .logotype
-  margin-bottom: 1rem
+  margin: 0 auto 1rem auto
+  width: fit-content
   text-align: center
   font-size: var(--fsize-logo)
   font-family: 'Coolvetica', Arial, sans-serif
-  span
-    cursor: pointer
-    transition: .3s
-    &:hover
-      color: blue
+  cursor: pointer
+  transition: .3s
+  &:hover
+    color: blue
   
 .description, .input
   margin-bottom: 1.5rem
