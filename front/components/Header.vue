@@ -47,6 +47,7 @@ export default{
   methods:{
     toggleLanguage(){
       this.$i18n.locale = this.$i18n.locale === 'en' ? 'ru' : 'en'
+      localStorage['lang'] = this.$i18n.locale
     },
     toggleScripts(){
       const store = useMainStore()

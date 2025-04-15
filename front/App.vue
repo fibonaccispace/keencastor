@@ -24,6 +24,9 @@ export default {
   },
   mounted(){
     this.setTheme()
+    if(localStorage['lang']){
+      this.$i18n.locale = localStorage['lang']
+    }
   },
   computed: {
     isMain() {
