@@ -10,7 +10,6 @@
     ).link
     p(v-html="$t('header.description')")
   input(
-    placeholder="tap here your ideas"
     ref="input"
   ).input
   .settings
@@ -104,6 +103,9 @@ export default{
 .description, .input
   margin-bottom: 1.5rem
 
+.description p
+  display: inline
+
 .statistic
   height: 3rem
   background: #eee
@@ -113,8 +115,10 @@ export default{
   color: #aaa
   margin-bottom: 1rem
 
-.block-title
+.settings .block-title
   margin-bottom: .3rem
+
+.block-title
   pointer-events: none
   user-select: none
   opacity: 0.5
