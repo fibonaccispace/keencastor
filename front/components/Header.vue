@@ -2,23 +2,23 @@
 .header
   .logotype keencastor
   .description 
-    .block-title what kind
-    a(href="https://keencastor.ru/v1/" target="blank").link old version of the site
-    | , the&nbsp;site about coding adventures, interesting tasks, 
-    | quotes from books, pet projects, images, visualizations, 
-    | generatives, web-games, interactive elements, mathematical 
-    | funs, facts about numbers, photos, installations, art objects.
-  //- .statistic statistic graph
+    .block-title {{$t('header.kind')}}
+    a(
+      href="https://keencastor.ru/v1" 
+      target="blank" 
+      v-html="$t('header.v1linktext')"
+    ).link
+    p(v-html="$t('header.description')")
   input(
     placeholder="tap here your ideas"
     ref="input"
   ).input
   .settings
-    .block-title settings
+    .block-title {{$t('header.settings')}}
     .options
-      .option en
-      .option light
-      .option(@click="toggleScripts" ref="scripts").active scripts
+      .option(@click="toggleLanguage") {{$t('header.lang')}}
+      .option {{$t('header.theme')}}
+      .option(@click="toggleScripts" ref="scripts").active {{$t('header.scrpits')}}
 </template>
 
 <script>
@@ -27,17 +27,7 @@ export default{
   data() {
     return {
       chooseIndex: 0,
-      chooseItems:[
-        'drawing machine',
-        'birth generator',
-        'kaleidoscope',
-        'more arts',
-        'interesting tasks',
-        'photos',
-        'web-games',
-        'more decors',
-        'facts about numbers',
-      ],
+      chooseItems: this.$t('header.placeholders').split('/'),
     }
   },
   mounted(){
@@ -51,6 +41,9 @@ export default{
     window.removeEventListener('scroll', this.scroll)
   },
   methods:{
+    toggleLanguage(){
+      this.$i18n.locale = this.$i18n.locale === 'en' ? 'ru' : 'en'
+    },
     toggleScripts(){
       const store = useMainStore()
       store.scripts = store.scripts ? false : true
@@ -63,7 +56,7 @@ export default{
     placeholder(){
       const choosed = this.chooseItems[(this.chooseIndex++)%this.chooseItems.length]
       if(this.$refs.input){
-        this.$refs.input.placeholder = `tap here your ideas: ${choosed}`
+        this.$refs.input.placeholder = `${this.$t('header.placeholder')}: ${choosed}`
       }
     },
     scroll(){

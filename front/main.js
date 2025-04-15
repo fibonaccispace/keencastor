@@ -2,6 +2,7 @@ import '/assets/global/main.sass'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { i18n } from './i18n.js'
 
 import App from './App.vue'
 import router from './router'
@@ -42,5 +43,6 @@ app.component('MiddleItem', MiddleItem)
 app.component('SmallItem', SmallItem)
 
 app.use(createPinia())
+app.use(i18n)
 app.use(router)
 app.mount('#app')
