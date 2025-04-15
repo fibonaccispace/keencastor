@@ -9,9 +9,20 @@
       v-html="$t('header.v1linktext')"
     ).link
     p(v-html="$t('header.description')")
-  input(
-    ref="input"
-  ).input
+  .input-wrapper
+    .placeholder(ref="placeholder") {{$t('header.placeholder')}}:
+      .placeholder-inner
+        .placeholder-variants
+          span {{$t('header.placeholders').split('/')[0]}}
+          span {{$t('header.placeholders').split('/')[1]}}
+          span {{$t('header.placeholders').split('/')[2]}}
+          span {{$t('header.placeholders').split('/')[3]}}
+          span {{$t('header.placeholders').split('/')[4]}}
+          span {{$t('header.placeholders').split('/')[0]}}
+    input(      
+      ref="input"
+      @input="change"
+    ).input
   .settings
     .block-title {{$t('header.settings')}}
     .options
@@ -25,16 +36,10 @@ import { useMainStore } from '@/store/main.js'
 export default{
   data() {
     return {
-      chooseIndex: 0,
-      chooseItems: this.$t('header.placeholders').split('/'),
     }
   },
   mounted(){
     window.addEventListener('scroll', this.scroll)
-    this.placeholder()
-    setInterval(()=>{
-      this.placeholder()
-    },5000)
   },
   beforeUnmount(){
     window.removeEventListener('scroll', this.scroll)
@@ -52,10 +57,13 @@ export default{
         this.$refs.scripts.classList.remove('active')
       }
     },
-    placeholder(){
-      const choosed = this.chooseItems[(this.chooseIndex++)%this.chooseItems.length]
-      if(this.$refs.input){
-        this.$refs.input.placeholder = `${this.$t('header.placeholder')}: ${choosed}`
+    change(){
+      const input = this.$refs.input
+      const placeholder = this.$refs.placeholder
+      if(input.value && placeholder){
+        placeholder.style.display = 'none'
+      }else{
+        placeholder.style.display = 'block'
       }
     },
     scroll(){
@@ -67,6 +75,78 @@ export default{
   }
 }
 </script>
+
+<style lang="sass">
+.input-wrapper
+  position: relative
+  &:has(input:focus) .placeholder
+    opacity: .3
+  .input
+    border: none
+    outline: none
+    width: 100%
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    padding: .7rem 1rem
+    border-radius: 1.2rem
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.05)
+    transition: .3s
+    font-size: 1rem
+    &:focus
+      box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.08)
+  .placeholder
+    opacity: .6
+    transition: .3s
+    pointer-events: none
+    user-select: none
+    position: absolute
+    top: 49%
+    left: 1.1rem
+    transform: translate(0,-50%)
+    .placeholder-inner
+      overflow: hidden
+      right: -4px
+      top: 0
+      transform: translate(100%,0)
+      height: 100%
+      position: absolute
+    .placeholder-variants
+      position: relative
+      left: 0
+      top: 0
+      display: flex
+      flex-direction: column
+      gap: 5px
+      animation: shifting 20s infinite
+
+@keyframes shifting
+  0%
+    transform: translateY(0.1%)
+  19%
+    transform: translateY(0.1%)
+
+  20%
+    transform: translateY(-17%)
+  39%
+    transform: translateY(-17%)
+
+  40%
+    transform: translateY(-34.5%)
+  59%
+    transform: translateY(-34.5%)
+
+  60%
+    transform: translateY(-51.7%)
+  79%
+    transform: translateY(-51.7%)
+
+  80%
+    transform: translateY(-69%)
+  99%
+    transform: translateY(-69%)
+
+  100%
+    transform: translateY(-86%)
+</style>
 
 <style lang="sass">
 @media(min-width: 1025px)
@@ -100,7 +180,7 @@ export default{
   &:hover
     color: blue
   
-.description, .input
+.description, .input-wrapper
   margin-bottom: 1.5rem
 
 .description p
@@ -116,12 +196,15 @@ export default{
   margin-bottom: 1rem
 
 .settings .block-title
+  margin-bottom: .5rem
+.description .block-title
   margin-bottom: .3rem
 
 .block-title
   pointer-events: none
   user-select: none
-  opacity: 0.5
+  opacity: .3
+  transition: .3s
 
 .options
   display: flex
@@ -135,7 +218,7 @@ export default{
     user-select: none
     padding: .5rem .8rem
     background: rgba(0, 0, 0, .05)
-    border-radius: 1rem
+    border-radius: 1.2rem
     cursor: pointer
     transition: .6s
   .option:hover
@@ -143,17 +226,4 @@ export default{
     transition: .1s
   .option:active
     transform: scale(0.95)
-
-.input
-  border: none
-  outline: none
-  width: 100%
-  border: 1px solid rgba(0, 0, 0, 0.1)
-  padding: .5rem .7rem
-  border-radius: 1rem
-  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.05)
-  transition: .3s
-  font-size: 1rem
-  &:focus
-    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.08)
 </style>
