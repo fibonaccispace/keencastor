@@ -19,7 +19,7 @@ const messages = {
         'facts about numbers',
       ].join('/'),
       settings: "settings",  
-      lang: "en",
+      lang: "ру",
       theme: "light",
       scrpits: "scrpits",
     }
@@ -42,7 +42,7 @@ const messages = {
         'факты о числах',
       ].join('/'),
       settings: "настройки",
-      lang: "ру",
+      lang: "en",
       theme: "светлое",
       scrpits: "скрипты",
     }

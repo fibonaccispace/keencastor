@@ -149,6 +149,7 @@ export default{
   border-radius: 1rem
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.05)
   transition: .3s
+  font-size: 1rem
   &:focus
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.08)
 </style>
