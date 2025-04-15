@@ -1,18 +1,32 @@
 <template lang="pug">
   .large-item
     .title-wrapper
-      .title(v-html="item.title")
+      .title(v-html="title")
     .icon-description-wrapper
       .preview
         //- img(:src="tempImagePath.low")
         img(:src="tempImagePath.high")
-      .description(v-html="item.description")
+      .description(v-html="description")
 </template>
 
 <script>
 export default{
   props: ['item'],
   computed:{
+    title(){
+      if(this.item.shortName){
+        const localName = this.$t(`items.${this.item.shortName}.title`)
+        if(localName) return localName
+      }
+      return this.item.title
+    },
+    description(){
+      if(this.item.shortName){
+        const localName = this.$t(`items.${this.item.shortName}.description`)
+        if(localName) return localName
+      }
+      return this.item.description
+    },
     tempImagePath(){
       const paths = ['assist', 'bong', 'cola', 'hz', 'smile', 'discord', 'ear', 'home', 'medusa', 'tail']
       const rnd = paths[Math.floor(Math.random()*paths.length)]

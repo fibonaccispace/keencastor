@@ -3,37 +3,43 @@
     "title": "Neural network",
     "description": "the simplest perceptron capable of classifying points of two classes on a plane. by the way, you can switch between different activation functions to explore the difference of dependency search",
     "image": "public/images/nn.png",
-    "link": "neural-network"
+    "link": "neural-network",
+    "shortName": "nn"
   },
   {
     "title": "Notes",
     "description": "browser note manager with save function, notes can be deleted and pinned, create different boards and rename them",
     "image": "public/images/notes.png",
-    "link": "notes"
+    "link": "notes",
+    "shortName": "note"
   },
   {
     "title": "Board",
     "description": "a common drawing area where anyone can draw anything and everyone can see it",
     "image": "public/images/board.png",
-    "link": "board"
+    "link": "board",
+    "shortName": "board"
   },
   {
     "title": "Flappy Bird AI",
     "description": "each bird has its own simple neural network with random weights. through natural selection and a genetic algorithm, the most successful birds pass their weights to the next generation with slight mutations, leading to correct behavior and jumping at the right moment",
     "image": "public/images/flappy.png",
-    "link": "flappy-bird-ai"
+    "link": "flappy-bird-ai",
+    "shortName": "flappy"
   },
   {
     "title": "Maxwell-Boltzmann distribution",
     "description": "distribution of the number of molecular speeds in a closed space",
     "image": "public/images/maxwell.png",
-    "link": "maxwell-boltzmann-distribution"
+    "link": "maxwell-boltzmann-distribution",
+    "shortName": "maxbolt"
   },
   {
     "title": "Aurora borealis",
     "description": "just beautiful",
     "image": "public/images/aurora.png",
-    "link": "aurora-borealis"
+    "link": "aurora-borealis",
+    "shortName": "aurora"
   },
   {
     "title": "Trees",
