@@ -45,90 +45,105 @@
     "title": "Trees",
     "description": "generation of a random alien tree based on a large genotype. generating one tree may take some time",
     "image": "public/images/tree.png",
-    "link": "trees"
+    "link": "trees",
+    "shortName": "tree"
   },
   {
     "title": "Lamp",
     "description": "a game about a light bulb that needs to find a key to open a door. the game consists of 5 gradually more difficult levels, the game adds new mechanics gradually, but the damn 3rd level is impossible to pass",
     "image": "public/images/lamp.png",
-    "link": "lamp"
+    "link": "lamp",
+    "shortName": "lamp"
   },
   {
     "title": "Julia set",
     "description": "imaginary beauty",
     "image": "public/images/julia.png",
-    "link": "julia-set"
+    "link": "julia-set",
+    "shortName": "julia"
   },
   {
     "title": "Procedural generation",
     "description": "generating terrain by overlaying several noise maps. Perlin noise is not used, i use something else",
     "image": "public/images/proceed.png",
-    "link": "procedural-generation"
+    "link": "procedural-generation",
+    "shortName": "proceed2d"
   },
   {
     "title": "Shader",
     "description": "a simple shader without using libraries, maybe that`s why it`s so slow",
     "image": "public/images/shader.png",
-    "link": "shader"
+    "link": "shader",
+    "shortName": "shader"
   },
   {
     "title": "Blind typing",
     "description": "touch typing trainer",
     "image": "public/images/blind.png",
-    "link": "blind"
+    "link": "blind",
+    "shortName": "blind"
   },
   {
     "title": "Rock, Paper, Scissors",
     "description": "who will win? i dont know, mb u know?",
     "image": "public/images/rps.png",
-    "link": "rock-papper-scissors"
+    "link": "rock-papper-scissors",
+    "shortName": "rps"
   },
   {
     "title": "Raycasting",
     "description": "a method of representing three-dimensional space where rays are cast from the observer`s camera. the rays intersect with objects in the scene, determining their location, angle of incidence, material, texture, and so on",
     "image": "public/images/ray.png",
-    "link": "raycasting"
+    "link": "raycasting",
+    "shortName": "ray"
   },
   {
     "title": "Markov chain",
     "description": "a sequence of random words and sentences achieved by searching for states for each word from the original sentence",
     "image": "public/images/markov.png",
-    "link": "markov-chain"
+    "link": "markov-chain",
+    "shortName": "markov"
   },
   {
     "title": "L-system",
     "description": "recursive tree generation",
     "image": "public/images/l-system.png",
-    "link": "l-system"
+    "link": "l-system",
+    "shortName": "lsystem"
   },
   {
     "title": "Chladni Patterns",
     "description": "the interference surfaces of the Chladni plates are defined as the positions at which N harmonics are suppressed. rather than limiting it to a line or plane as in the classic Chladni plate experiments, a rich set of surfaces results from the presence of three orthogonal harmonics",
     "image": "public/images/chladni.png",
-    "link": "chladni-patterns"
+    "link": "chladni-patterns",
+    "shortName": "chlandi"
   },
   {
     "title": "Neural cellular automaton",
     "description": "cellular automaton using the methods of convolutional neural networks - filters and activation functions. the example given uses a 3 by 3 filter with an inverted gaussian function",
     "image": "public/images/nca.png",
-    "link": "neural-cellular-automaton"
+    "link": "neural-cellular-automaton",
+    "shortName": "nca"
   },
   {
     "title": "Procedural generation 3D",
     "description": "generation of a pseudo three-dimensional canvas of heights, creating an image of the surface and biomes",
     "image": "public/images/proceed22.png",
-    "link": "procedural-generation-3d"
+    "link": "procedural-generation-3d",
+    "shortName": "proceed3d"
   },
   {
     "title": "Nuclear reaction",
     "description": "nuclear reaction that occurs when exposed to one free neutron",
     "image": "public/images/nuclear.jpg",
-    "link": "nuclear-reaction"
+    "link": "nuclear-reaction",
+    "shortName": "nuclear"
   },
   {
     "title": "3D visualization",
-    "description": "cellular automaton using the methods of convolutional neural networks - filters and activation functions. the example given uses a 3 by 3 filter with an inverted gaussian function",
+    "description": "application for displaying 3D data in json format",
     "image": "public/images/3d.png",
-    "link": "3d-visualization"
+    "link": "3d-visualization",
+    "shortName": "visual3d"
   }
 ]

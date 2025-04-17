@@ -44,8 +44,69 @@ const messages = {
         title: 'Aurora borealis',
         description: 'just beautiful'
       },
+      tree:{
+        title: 'Trees',
+        description: 'generation of&nbsp;a&nbsp;random alien tree based on&nbsp;a&nbsp;large genotype. generating one tree may take some time'
+      },
+      lamp:{
+        title: 'Lamp',
+        description: 'a&nbsp;game about a&nbsp;light bulb that needs to&nbsp;find a&nbsp;key to&nbsp;open a&nbsp;door. the game consists of&nbsp;5&nbsp;gradually more difficult levels, the game adds new mechanics gradually, but the damn 3rd level is&nbsp;impossible to&nbsp;pass'
+      },
+      julia:{
+        title: 'Julia set',
+        description: 'imaginary beauty'
+      },
+      proceed2d:{
+        title: 'Procedural generation',
+        description: 'generating terrain by&nbsp;overlaying several noise maps. Perlin noise is&nbsp;not used, i&nbsp;use something else'
+      },
+      shader:{
+        title: 'Shader',
+        description: 'a&nbsp;simple shader without using libraries, maybe that`s why it`s so&nbsp;slow'
+      },
+      blind:{
+        title: 'Blind typing',
+        description: 'touch typing trainer'
+      },
+      rps:{
+        title: 'Rock, paper, scissors',
+        description: 'random fluctuations of&nbsp;the winner with infographics'
+      },
+      ray:{
+        title: 'Raycasting',
+        description: 'a&nbsp;method of&nbsp;representing three-dimensional space where rays are cast from the observer`s camera. the rays intersect with objects in&nbsp;the scene, determining their location, angle of&nbsp;incidence, material, texture, and so&nbsp;on'
+      },
+      markov:{
+        title: 'Markov chain',
+        description: 'a&nbsp;sequence of&nbsp;random words and sentences achieved by&nbsp;searching for states for each word from the original sentence'
+      },
+      lsystem:{
+        title: 'L-system',
+        description: 'recursive tree generation'
+      },
+      chlandi:{
+        title: 'Chladni Patterns',
+        description: 'the interference surfaces of&nbsp;the Chladni plates are defined as&nbsp;the positions at&nbsp;which&nbsp;N harmonics are suppressed. rather than limiting it&nbsp;to&nbsp;a&nbsp;line or&nbsp;plane as&nbsp;in&nbsp;the classic Chladni plate experiments, a&nbsp;rich set of&nbsp;surfaces results from the presence of&nbsp;three orthogonal harmonics'
+      },
+      nca:{
+        title: 'Neural cellular automaton',
+        description: 'cellular automaton using the methods of&nbsp;convolutional neural networks&nbsp;&mdash; filters and activation functions. the example given uses a&nbsp;3&nbsp;by&nbsp;3&nbsp;filter with an&nbsp;inverted gaussian function'
+      },
+      proceed3d:{
+        title: 'Procedural generation 3D',
+        description: 'generation of&nbsp;a&nbsp;pseudo three-dimensional canvas of&nbsp;heights, creating an&nbsp;image of&nbsp;the surface and biomes'
+      },
+      nuclear:{
+        title: 'Nuclear reaction',
+        description: 'nuclear reaction that occurs when exposed to&nbsp;one free neutron'
+      },
+      visual3d:{
+        title: '3D visualization',
+        description: 'application for displaying 3D&nbsp;data in&nbsp;json format'
+      },
     }
   },
+
   ru: {
     header: {
       kind: "о чем сайт",
@@ -65,11 +126,6 @@ const messages = {
       scrpits: "скрипты",
     },
     items:{
-      short:{
-        title: 'НАЗВАНИЕ',
-        description: 'ОПИСАНИЕ'
-      },
-
       nn:{
         title: 'Нейронная сеть',
         description: 'простейший перцептрон, способный классифицировать точки двух классов на&nbsp;плоскости. внутри можно переключаться между функциями-активации'
@@ -93,6 +149,67 @@ const messages = {
       aurora:{
         title: 'Северное сияние',
         description: 'просто хуйнюшка'
+      },
+      tree:{
+        title: 'Деревья',
+        description: 'генерация случайного инопланетного дерева или куста на&nbsp;основе большого случайного генотипа. (создание одного дерева может занять некоторое время)'
+      },
+      lamp:{
+        title: 'Лампочка',
+        description: 'игра про лампочку, которой нужно найти ключ и&nbsp;открыть дверь. игра состоит из&nbsp;5&nbsp;постепенно усложняющихся уровней, игра постепенно добавляет новые механики, но&nbsp;злоебучий 3-й уровень пройти невозможно'
+      },
+      julia:{
+        title: 'Множество Жулиа',
+        description: 'математика, мнимость, красота'
+      },
+
+      proceed2d:{
+        title: 'Процедурная генерация',
+        description: 'cоздание ландшафта путем наложения нескольких шумовых карт. Перлиновский шум не&nbsp;используется'
+      },
+      shader:{
+        title: 'Шэйдер',
+        description: 'простой шейдер без использования библиотек, может быть поэтому он&nbsp;такой медленный'
+      },
+      blind:{
+        title: 'Слепопечатание',
+        description: 'платформа для тренировки печатания в&nbsp;слепую'
+      },
+      rps:{
+        title: 'Камень, ножницы, бумага',
+        description: 'всем знакомая игра на графике'
+      },
+      ray:{
+        title: 'Рэйкастинг',
+        description: 'метод трассировки, при котором лучи испускаются из&nbsp;камеры наблюдателя. луч попадая в&nbsp;объект узнает координату и&nbsp;угол попадания, чтобы покрасить пиксель в&nbsp;определенный цвет'
+      },
+      markov:{
+        title: 'Цепь Маркова',
+        description: 'последовательность случайных слов и&nbsp;предложений, полученная путем поиска состояний для каждого слова из&nbsp;исходного предложения'
+      },
+      lsystem:{
+        title: 'Л-системы',
+        description: 'рекурсивная генерация дерева по заданным параметрам'
+      },
+      chlandi:{
+        title: 'Узоры Хладни',
+        description: 'если сыпануть горсть сахарного песка на&nbsp;тонкую квадратную пластину и&nbsp;спустить по&nbsp;кряю этой пластины смычок от&nbsp;скрипки, то&nbsp;частицы на&nbsp;поверхности начнут создавать интерференционные узоры. этот проект как раз, чтобы поиграться с&nbsp;такой пластиной'
+      },
+      nca:{
+        title: 'Нейронный клеточный автомат',
+        description: 'клеточный автомат, использующий методы сверточных нейронных сетей&nbsp;&mdash; фильтры и&nbsp;функции-активации.&nbsp;в&nbsp;приведенном примере используется фильтр 3✕3&nbsp;с обратной гауссовой функцией-активации'
+      },
+      proceed3d:{
+        title: 'Процедурная генерация 3Д',
+        description: 'генерация псевдотрехмерного холста высот, создающего изображение поверхности и&nbsp;случайных биомов'
+      },
+      nuclear:{
+        title: 'Ядерная реакция',
+        description: 'которая происходит при воздействии одного свободного нейтрона'
+      },
+      visual3d:{
+        title: '3Д-визуализатор',
+        description: 'приложение для отображения трехмерных данных в&nbsp;джейсон формате'
       },
     }
   }
