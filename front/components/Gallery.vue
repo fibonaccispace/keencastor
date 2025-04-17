@@ -123,10 +123,9 @@ ul
 li
   // background: rgba(0, 256, 0, 0.5)
   break-inside: avoid
-  margin-bottom: 3rem
+  margin-bottom: 5rem
 
 .decor
-  // outline: 1px dashed black
   position: relative
   display: flex
   justify-content: center
