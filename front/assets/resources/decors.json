@@ -31,6 +31,9 @@
   },
   {
     "component": "GrassDecor",
-    "guidance": true
+    "guidance": true,
+    "style":{
+      "cursor": "ew-resize"
+    }
   }
 ]
