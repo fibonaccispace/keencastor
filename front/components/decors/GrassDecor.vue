@@ -24,10 +24,13 @@
 </style>
 
 <script>
+import { useMainStore } from '@/store/main.js'
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min
 export default{
   data(){
     return{
+      store: null,
+      isFirstFrame: true,
       field: null,
       lastX: 0,
       currentX: 0,
@@ -38,6 +41,7 @@ export default{
     }
   },
   mounted(){
+    this.store = useMainStore()
     this.field = this.$refs.field
     if(this.field){
       for(let i = 0; i < 30; i++){
@@ -48,6 +52,7 @@ export default{
       requestAnimationFrame(this.animate)
     }
     this.field.addEventListener('mousemove', (e)=>{
+      if(!this.store.scripts) return
       this.currentX = e.offsetX
       this.diffX = this.currentX - this.lastX
       this.lastX = this.currentX
@@ -57,6 +62,10 @@ export default{
   methods:{
     animate(){
       requestAnimationFrame(this.animate)
+      if(!this.isFirstFrame && !this.store.scripts){
+        return
+      }
+      this.isFirstFrame = false
       const wind = this.actualShiftX
       this.actualShiftX += (this.targetX-this.actualShiftX)/15
       this.targetX -= this.targetX/10
