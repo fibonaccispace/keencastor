@@ -75,6 +75,9 @@ export default {
 
     requestAnimationFrame(this.animate)
   },
+  beforeUnmount(){
+    this.$refs.canvas.removeEventListener('click')
+  },
   methods: {
     random(min, max) {
       return Math.floor(Math.random() * (max - min) + min)

@@ -28,5 +28,9 @@
     "style":{
       "cursor": "pointer"
     }
+  },
+  {
+    "component": "FiveDecor",
+    "interactive": false
   }
 ]

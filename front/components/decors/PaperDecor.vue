@@ -148,11 +148,17 @@ export default {
     this.context.scale(dpr, dpr)
 
     this.canvas.addEventListener('click', () => {
+      if (!this.isFirstFrame && !this.store.scripts) {
+        return
+      }
       this.context.clearRect(0, 0, this.width, this.height)
       this.render()
     })
 
     requestAnimationFrame(this.render)
+  },
+  beforeUnmount(){
+    this.$refs.canvas.removeEventListener('click')
   },
   methods: {
     random(min, max) {
