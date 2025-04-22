@@ -21,5 +21,12 @@
     "style":{
       "cursor": "pointer"
     }
+  },
+  {
+    "component": "PaperDecor",
+    "interactive": true,
+    "style":{
+      "cursor": "pointer"
+    }
   }
 ]

@@ -16,6 +16,7 @@ import NowDecor from './components/decors/NowDecor.vue'
 import FlowerDecor from './components/decors/FlowerDecor.vue'
 import WaveDecor from './components/decors/WaveDecor.vue'
 import LineDecor from './components/decors/LineDecor.vue'
+import PaperDecor from './components/decors/PaperDecor.vue'
 
 import Item from './components/items/Item.vue'
 import LargeItem from './components/items/LargeItem.vue'
@@ -35,6 +36,7 @@ app.component('NowDecor', NowDecor)
 app.component('FlowerDecor', FlowerDecor)
 app.component('WaveDecor', WaveDecor)
 app.component('LineDecor', LineDecor)
+app.component('PaperDecor', PaperDecor)
 
 // ЭЛЕМЕНТЫ ПРОЕКТОВ
 app.component('Item', Item)
