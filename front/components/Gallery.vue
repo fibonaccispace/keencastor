@@ -9,7 +9,8 @@
         Item(:item="item")
       li(v-else-if="item.type == 'decor'").decor.element
         Decoration(:item="item")
-        .interactive(v-if="item.interactive")
+        .clickable(v-if="item.clickable")
+        .guidance(v-if="item.guidance")
       li(v-else-if="item.type == 'art'").art.element
         img(:src="item.path")
         a(:href="`https://www.instagram.com/${item.author}`" target="blank").author @{{item.author}}
@@ -129,21 +130,24 @@ li
   position: relative
   display: flex
   justify-content: center
-  .interactive
+  .clickable, .guidance
     position: absolute
     right: 0
     bottom: 0
     transform: translate(-40%, 70%)
-
     pointer-events: none
     user-select: none
-
     width: 30px
     height: 30px
-    background-image: url('images/pointinghand.svg')
     background-repeat: no-repeat
     background-position: center
     background-size: 150% 150%
+  .clickable
+    background-image: url('images/pointinghand.svg')
+  .guidance
+    width: 20px
+    height: 20px
+    background-image: url('images/resizenortheastsouthwest.svg')
 
 .art
   position: relative

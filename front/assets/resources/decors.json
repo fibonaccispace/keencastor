@@ -1,15 +1,12 @@
 [
   {
-    "component": "NowDecor",
-    "interactive": false
+    "component": "NowDecor"
   },
   {
-    "component": "FlowerDecor",
-    "interactive": false
+    "component": "FlowerDecor"
   },
   {
     "component": "WaveDecor",
-    "interactive": false,
     "style":{
       "backgroundColor": "rgb(246, 197, 229)",
       "borderRadius": "5px"
@@ -17,20 +14,23 @@
   },
   {
     "component": "LineDecor",
-    "interactive": true,
+    "clickable": true,
     "style":{
       "cursor": "pointer"
     }
   },
   {
     "component": "PaperDecor",
-    "interactive": true,
+    "clickable": true,
     "style":{
       "cursor": "pointer"
     }
   },
   {
-    "component": "FiveDecor",
-    "interactive": false
+    "component": "FiveDecor"
+  },
+  {
+    "component": "GrassDecor",
+    "guidance": true
   }
 ]

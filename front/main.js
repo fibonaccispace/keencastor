@@ -18,6 +18,7 @@ import WaveDecor from './components/decors/WaveDecor.vue'
 import LineDecor from './components/decors/LineDecor.vue'
 import PaperDecor from './components/decors/PaperDecor.vue'
 import FiveDecor from './components/decors/FiveDecor.vue'
+import GrassDecor from './components/decors/GrassDecor.vue'
 
 import Item from './components/items/Item.vue'
 import LargeItem from './components/items/LargeItem.vue'
@@ -39,6 +40,7 @@ app.component('WaveDecor', WaveDecor)
 app.component('LineDecor', LineDecor)
 app.component('PaperDecor', PaperDecor)
 app.component('FiveDecor', FiveDecor)
+app.component('GrassDecor', GrassDecor)
 
 // ЭЛЕМЕНТЫ ПРОЕКТОВ
 app.component('Item', Item)
