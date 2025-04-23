@@ -24,6 +24,9 @@
     "title": "Flappy Bird AI",
     "description": "each bird has its own simple neural network with random weights. through natural selection and a genetic algorithm, the most successful birds pass their weights to the next generation with slight mutations, leading to correct behavior and jumping at the right moment",
     "image": "public/images/flappy.png",
+    "imageStyle": {
+      "width": "130px"
+    },
     "link": "flappy-bird-ai",
     "shortName": "flappy"
   },

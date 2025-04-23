@@ -5,7 +5,7 @@
     .icon-description-wrapper
       .preview
         //- img(:src="tempImagePath.low")
-        img(:src="tempImagePath.high")
+        img(:src="tempImagePath.high" :style="item.imageStyle")
       .description(v-html="description")
 </template>
 
@@ -28,6 +28,7 @@ export default{
       return this.item.description
     },
     tempImagePath(){
+      if(this.item.shortName == 'flappy') return {high:'/public/images/flappy.png'}
       const paths = ['assist', 'bong', 'cola', 'hz', 'smile', 'discord', 'ear', 'home', 'medusa', 'tail']
       const rnd = paths[Math.floor(Math.random()*paths.length)]
       return{
