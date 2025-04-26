@@ -17,7 +17,7 @@ const messages = {
       settings: "settings",  
       lang: "ru",
       theme: "light",
-      scrpits: "scrpits",
+      scrpits: "motion",
     },
     items:{
       nn:{
@@ -123,7 +123,7 @@ const messages = {
       settings: "настройки",
       lang: "en",
       theme: "светлое",
-      scrpits: "скрипты",
+      scrpits: "моушн",
     },
     items:{
       nn:{

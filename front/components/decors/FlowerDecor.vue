@@ -127,6 +127,7 @@ export default {
       width: 180,
       height: 180,
       context: null,
+      colors: ['red', 'white', 'blue', 'deeppink', 'violet', 'purple']
     }
   },
   mounted() {
@@ -138,15 +139,15 @@ export default {
     this.$refs.canvas.style.height = this.height + 'px'
     this.context = this.$refs.canvas.getContext('2d')
     this.context.scale(dpr, dpr)
-
+    const color = this.colors[random(0,this.colors.length)]
     this.flower = {
       petals: [
-        new Petal(0, 60, 'red', this.width, this.height),
-        new Petal(1, 60, 'red', this.width, this.height),
-        new Petal(2, 60, 'red', this.width, this.height),
-        new Petal(3, 60, 'red', this.width, this.height),
-        new Petal(4, 60, 'red', this.width, this.height),
-        new Petal(5, 60, 'red', this.width, this.height),
+        new Petal(0, 60, color, this.width, this.height),
+        new Petal(1, 60, color, this.width, this.height),
+        new Petal(2, 60, color, this.width, this.height),
+        new Petal(3, 60, color, this.width, this.height),
+        new Petal(4, 60, color, this.width, this.height),
+        new Petal(5, 60, color, this.width, this.height),
       ],
       stem: new Stem(this.width, this.height),
       middle: new MiddleCircle(this.width, this.height)

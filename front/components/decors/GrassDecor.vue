@@ -77,14 +77,15 @@ export default{
       }
     },
     createGrass(){
+      const posX = random(0, 100)
       const grass = document.createElement('div')
       grass.classList.add('grass')
-      grass.style.left = random(0, 100) + '%'
-      grass.style.bottom = random(-5, 5) + 'px'
+      grass.style.left = posX + '%'
+      grass.style.bottom = random(-5, 6) + 'px'
       grass.style.height = random(20, 90) + '%'
       grass.style.background = `rgb(${random(20,60)},${random(150,190)},${random(20,60)})`
-      grass.min = random(-12, -5)
-      grass.max = random(5, 12)
+      grass.min = random(-12, -4)
+      grass.max = random(5, 13)
       grass.time = random(0, 100)
 
       const color = `rgb(${random(200,255)},${random(20,100)},${random(20,100)})`
