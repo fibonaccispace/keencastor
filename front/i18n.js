@@ -15,6 +15,7 @@ const messages = {
         'more decors',
       ].join('/'),
       settings: "settings",  
+      filter: "filters",
       lang: "ru",
       theme: "light",
       scrpits: "motion",
@@ -121,6 +122,7 @@ const messages = {
         'декорации',
       ].join('/'),
       settings: "настройки",
+      filter: "фильтры",
       lang: "en",
       theme: "светлое",
       scrpits: "моушн",
@@ -148,7 +150,7 @@ const messages = {
       },
       aurora:{
         title: 'Северное сияние',
-        description: 'просто хуйнюшка'
+        description: 'просто небольшая дрюка'
       },
       tree:{
         title: 'Деревья',

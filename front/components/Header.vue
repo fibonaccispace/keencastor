@@ -23,7 +23,28 @@
       ref="input"
       @input="change"
     ).input
-  .settings
+  .filters
+    .block-title {{$t('header.filter')}}
+    .options
+      .option
+        img(src="/images/filters/all-mini.png")
+        span Все
+      .option 
+        img(src="/images/filters/flappy-mini.png")
+        span Проекты
+      .option
+        img(src="/images/filters/flower-mini.png")
+        span Декорации
+      .option
+        img(src="/images/filters/art-mini.png")
+        span Арты
+      .option Матеша
+      .option Нейронка
+      .option Дрюка
+      .option Генерации
+      .option Игры
+        
+  //- .settings
     .block-title {{$t('header.settings')}}
     .options
       .option(@click="toggleLanguage") {{$t('header.lang')}}
@@ -181,7 +202,8 @@ export default{
   &:hover
     color: blue
   
-.description, .input-wrapper
+.description, 
+.input-wrapper
   margin-bottom: 1.5rem
 
 .description p
@@ -196,7 +218,8 @@ export default{
   color: #aaa
   margin-bottom: 1rem
 
-.settings .block-title
+.settings .block-title,
+.filters .block-title
   margin-bottom: .5rem
 .description .block-title
   margin-bottom: .3rem
@@ -209,6 +232,7 @@ export default{
 
 .options
   display: flex
+  flex-wrap: wrap
   gap: .5rem
   .option.active
     background: black
@@ -222,6 +246,12 @@ export default{
     border-radius: 1.2rem
     cursor: pointer
     transition: .6s
+    display: flex
+    justify-content: center
+    line-height: 150%
+    img
+      height: 20px
+      margin-right: .2rem
   .option:hover
     background: rgba(0, 0, 0, 0.1)
     transition: .1s
