@@ -38,9 +38,9 @@
       .option
         img(src="/images/filters/art-mini.png")
         span Арты
-      .option Матеша
-      .option Нейронка
-      .option Дрюка
+      .option Матеши
+      .option Нейронки
+      .option Дрюки
       .option Генерации
       .option Игры
         
