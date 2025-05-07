@@ -7,6 +7,7 @@
   position: relative
   width: 200px
   height: 200px
+  background: linear-gradient(#fff 60%, #35fe02)
   .grass
     pointer-events: none
     position: absolute
