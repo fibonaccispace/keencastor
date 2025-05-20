@@ -9,7 +9,7 @@
       v-html="$t('header.v1linktext')"
     ).link
     p(v-html="$t('header.description')")
-  .input-wrapper
+  //- .input-wrapper
     .placeholder(ref="placeholder") {{$t('header.placeholder')}}:
       .placeholder-inner
         .placeholder-variants
