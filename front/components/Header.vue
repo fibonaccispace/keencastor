@@ -28,16 +28,16 @@
     .options
       .option
         img(src="/images/filters/all-mini.png")
-        span Все
+        span {{$t('header.filters.all')}}
       .option 
         img(src="/images/filters/flappy-mini.png")
-        span Проекты
+        span {{$t('header.filters.items')}}
       .option
         img(src="/images/filters/flower-mini.png")
-        span Декорации
+        span {{$t('header.filters.decors')}}
       .option
         img(src="/images/filters/art-mini.png")
-        span Арты
+        span {{$t('header.filters.arts')}}
       //- .option Матеши
       //- .option Нейронки
       //- .option Дрюки
