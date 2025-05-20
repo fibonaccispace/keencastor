@@ -20,10 +20,6 @@ export default {
     this.onLoad()
   },
   methods:{
-    refresh(){
-      this.gallery.length = 0
-      this.onLoad()
-    },
     async onLoad(){
       const items = (await import('../assets/resources/items.json')).default
       const decors = (await import('../assets/resources/decors.json')).default

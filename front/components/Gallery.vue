@@ -28,10 +28,6 @@ export default {
     this.onLoad()
   },
   methods:{
-    refresh(){
-      this.gallery.length = 0
-      this.onLoad()
-    },
     async onLoad(){
       this.loading = true
       const items = (await import('../assets/resources/items.json')).default
