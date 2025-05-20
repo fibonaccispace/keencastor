@@ -50,6 +50,7 @@ export default {
       height: 180,
       pixel: 4,
       context: null,
+      clickHandler: null,
     }
   },
   mounted() {
@@ -66,17 +67,17 @@ export default {
     for (let i = 0; i < random(6,20); i++)
       this.points.push(new Point(this.width, this.height, this.pixel))
 
-    this.$refs.canvas.addEventListener('click', () => {
+    this.clickHandler = ()=>{
       if(!this.store.scripts) return
       this.points.length = 0
       for (let i = 0; i < random(6,20); i++)
         this.points.push(new Point(this.width, this.height, this.pixel))
-    })
-
+    }
+    this.$refs.canvas.addEventListener('click', this.clickHandler)
     requestAnimationFrame(this.animate)
   },
   beforeUnmount(){
-    this.$refs.canvas.removeEventListener('click')
+    this.$refs.canvas.removeEventListener('click', this.clickHandler)
   },
   methods: {
     random(min, max) {

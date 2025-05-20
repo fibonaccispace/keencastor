@@ -134,6 +134,7 @@ export default {
       height: 180,
       canvas: null,
       context: null,
+      clickHandler: null,
     }
   },
   mounted() {
@@ -147,16 +148,18 @@ export default {
     this.context = this.$refs.canvas.getContext('2d')
     this.context.scale(dpr, dpr)
 
-    this.canvas.addEventListener('click', () => {
+    this.clickHandler = ()=>{
       if (!this.store.scripts) return
       this.context.clearRect(0, 0, this.width, this.height)
       this.render()
-    })
+    }
+
+    this.canvas.addEventListener('click', this.clickHandler)
 
     requestAnimationFrame(this.render)
   },
   beforeUnmount(){
-    this.$refs.canvas.removeEventListener('click')
+    this.$refs.canvas.removeEventListener('click', this.clickHandler)
   },
   methods: {
     random(min, max) {

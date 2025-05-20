@@ -25,23 +25,31 @@ export default {
     }
   },
   async created() {
-    const items = (await import('../assets/resources/items.json')).default
-    const decors = (await import('../assets/resources/decors.json')).default
-    const arts = (await import('../assets/resources/arts.json')).default
-    this.refactoring(items, decors, arts)
-
-    this.$nextTick(()=>{
-      const items = document.querySelectorAll('ul .element')
-      items.forEach((item, index)=>{
-        const delay = (index/items.length)*500
-        setTimeout(()=>{
-          item.style.opacity = 1
-          item.style.transform = 'scale(1)'
-        },delay+this.spawndelay)
-      })
-    })
+    this.onLoad()
   },
   methods:{
+    refresh(){
+      this.gallery.length = 0
+      this.onLoad()
+    },
+    async onLoad(){
+      this.loading = true
+      const items = (await import('../assets/resources/items.json')).default
+      const decors = (await import('../assets/resources/decors.json')).default
+      const arts = (await import('../assets/resources/arts.json')).default
+      this.refactoring(items, decors, arts)
+
+      this.$nextTick(()=>{
+        const items = document.querySelectorAll('ul .element')
+        items.forEach((item, index)=>{
+          const delay = (index/items.length)*500
+          setTimeout(()=>{
+            item.style.opacity = 1
+            item.style.transform = 'scale(1)'
+          },delay+this.spawndelay)
+        })
+      })
+    },
     random(min, max){
       return Math.floor(Math.random()*(max-min)+min)
     },

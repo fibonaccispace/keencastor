@@ -38,17 +38,17 @@
       .option
         img(src="/images/filters/art-mini.png")
         span Арты
-      .option Матеши
-      .option Нейронки
-      .option Дрюки
-      .option Генерации
-      .option Игры
+      //- .option Матеши
+      //- .option Нейронки
+      //- .option Дрюки
+      //- .option Генерации
+      //- .option Игры
         
-  //- .settings
+  .settings
     .block-title {{$t('header.settings')}}
     .options
       .option(@click="toggleLanguage") {{$t('header.lang')}}
-      .option {{$t('header.theme')}}
+      //- .option {{$t('header.theme')}}
       .option(@click="toggleScripts" ref="scripts").active {{$t('header.scrpits')}}
 </template>
 
@@ -67,6 +67,7 @@ export default{
   },
   methods:{
     toggleLanguage(){
+      this.$emit('toggleLanguage')
       this.$i18n.locale = this.$i18n.locale === 'en' ? 'ru' : 'en'
       localStorage['lang'] = this.$i18n.locale
     },
@@ -203,7 +204,8 @@ export default{
     color: blue
   
 .description, 
-.input-wrapper
+.input-wrapper,
+.filters
   margin-bottom: 1.5rem
 
 .description p

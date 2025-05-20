@@ -1,9 +1,9 @@
 <template lang="pug">
   template(v-if="isMain")
     #main-container
-      Header
-      Gallery
-      Footer
+      Header(@toggleLanguage="restart")
+      Gallery(ref="gallery")
+      Footer(ref="footer")
   template(v-else)
     RouterView
 </template>
@@ -40,6 +40,10 @@ export default {
     toggleTheme() {
       this.theme = this.theme === 'dark' ? 'light' : 'dark'
       this.setTheme()
+    },
+    restart(){
+      this.$refs.gallery.refresh()
+      this.$refs.footer.refresh()
     },
   }
 }

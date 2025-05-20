@@ -1,5 +1,5 @@
 <template lang="pug">
-.footer(ref="footer")
+.footer(ref="footer" v-if="gallery.length>0")
   .footer-gallery
     ul
       a(v-for="item in gallery" :href="item.link")
@@ -17,17 +17,26 @@ export default {
     }
   },
   async created() {
-    const items = (await import('../assets/resources/items.json')).default
-    const decors = (await import('../assets/resources/decors.json')).default
-    const arts = (await import('../assets/resources/arts.json')).default
-    this.refactoring(items, decors, arts)
-    this.$nextTick(()=>{
-      setTimeout(()=>{
-        this.$refs.footer.style.opacity = 1
-      },100)
-    })
+    this.onLoad()
   },
   methods:{
+    refresh(){
+      this.gallery.length = 0
+      this.onLoad()
+    },
+    async onLoad(){
+      const items = (await import('../assets/resources/items.json')).default
+      const decors = (await import('../assets/resources/decors.json')).default
+      const arts = (await import('../assets/resources/arts.json')).default
+      this.refactoring(items, decors, arts)
+      this.$nextTick(()=>{
+        setTimeout(()=>{
+          if(this.$refs.footer){
+            this.$refs.footer.style.opacity = 1
+          }
+        },100)
+      })
+    },
     random(min, max){
       return Math.floor(Math.random()*(max-min)+min)
     },
