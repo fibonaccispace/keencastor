@@ -28,12 +28,12 @@ export default{
       return this.item.description
     },
     tempImagePath(){
-      if(this.item.shortName == 'flappy') return {high:'/public/images/flappy.png'}
+      if(this.item.shortName == 'flappy') return {high:'images/flappy.png'}
       const paths = ['assist', 'bong', 'cola', 'hz', 'smile', 'discord', 'ear', 'home', 'medusa', 'tail']
       const rnd = paths[Math.floor(Math.random()*paths.length)]
       return{
-        low: `/public/images/${rnd}_low.png`,
-        high: `/public/images/${rnd}.png`
+        low: `images/${rnd}_low.png`,
+        high: `images/${rnd}.png`
       }
     }
   }

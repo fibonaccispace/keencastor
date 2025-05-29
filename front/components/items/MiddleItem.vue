@@ -29,7 +29,7 @@ export default{
     tempImagePath(){
       const paths = ['assist', 'bong', 'cola', 'hz', 'smile', 'discord', 'ear', 'home', 'medusa', 'tail']
       const rnd = paths[Math.floor(Math.random()*paths.length)]
-      return `/public/images/${rnd}.png`
+      return `images/${rnd}.png`
     }
   }
 }

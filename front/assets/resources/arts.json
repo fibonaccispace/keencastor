@@ -1,48 +1,48 @@
 [
   {
-    "path": "/public/images/arts/daltondoodles.jpeg",
+    "path": "images/arts/daltondoodles.jpeg",
     "author": "daltondoodles",
     "style": {
       "background": "red"
     }
   },
   {
-    "path": "/public/images/arts/eightdecay.jpeg",
+    "path": "images/arts/eightdecay.jpeg",
     "author": "eightdecay",
     "style": {
       "background": "red"
     }
   },
   {
-    "path": "/public/images/arts/thegraphicaddict.jpg",
+    "path": "images/arts/thegraphicaddict.jpg",
     "author": "thegraphicaddict",
     "style": {
       "background": "red"
     }
   },
   {
-    "path": "/public/images/arts/junwoo_park23.jpeg",
+    "path": "images/arts/junwoo_park23.jpeg",
     "author": "junwoo_park23",
     "style": {
       "background": "red"
     }
   },
   {
-    "path": "/public/images/arts/nikkantypo.jpg",
+    "path": "images/arts/nikkantypo.jpg",
     "author": "nikkantypo",
     "style": {
       "background": "red"
     }
   },
   {
-    "path": "/public/images/arts/public_possession.jpeg",
+    "path": "images/arts/public_possession.jpeg",
     "author": "public_possession",
     "style": {
       "background": "red"
     }
   },
   {
-    "path": "/public/images/arts/renmorita_.jpg",
+    "path": "images/arts/renmorita_.jpg",
     "author": "renmorita_"
   }
 ]
