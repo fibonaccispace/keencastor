@@ -28,7 +28,7 @@ export default{
       return this.item.description
     },
     tempImagePath(){
-      if(this.item.shortName == 'flappy') return {high:'images/flappy.png'}
+      return {high:this.item.image}
       const paths = ['assist', 'bong', 'cola', 'hz', 'smile', 'discord', 'ear', 'home', 'medusa', 'tail']
       const rnd = paths[Math.floor(Math.random()*paths.length)]
       return{

@@ -5,7 +5,7 @@
         .title(v-html="title")
       .description(v-html="description")
     .preview
-      img(:src="tempImagePath")
+      img(:src="tempImagePath.high")
 </template>
 
 <script>
@@ -27,6 +27,7 @@ export default{
       return this.item.description
     },
     tempImagePath(){
+      return {high:this.item.image}
       const paths = ['assist', 'bong', 'cola', 'hz', 'smile', 'discord', 'ear', 'home', 'medusa', 'tail']
       const rnd = paths[Math.floor(Math.random()*paths.length)]
       return `images/${rnd}.png`
