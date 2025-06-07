@@ -4,7 +4,10 @@
     ul
       a(v-for="item in gallery" :href="item.link")
         li(v-if="item.type == 'item'").item {{ item.title.toLowerCase() }}
-  span ©&nbsp;{{startYear}}-{{currentYear}}&nbsp;keencastor 
+  span ©&nbsp;{{startYear}}-{{currentYear}}&nbsp;keencastor. 
+  span Thanks 
+    a(href="https://www.thiings.co/things" target="blank").link thiings.co
+    |  for amazing icons.
 </template>
 
 <script>

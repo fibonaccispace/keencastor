@@ -128,14 +128,14 @@
   {
     "title": "Procedural generation 3D",
     "description": "generation of a pseudo three-dimensional canvas of heights, creating an image of the surface and biomes",
-    "image": "images/items/proceed22.png",
+    "image": "images/items/proceed2.png",
     "link": "procedural-generation-3d",
     "shortName": "proceed3d"
   },
   {
     "title": "Nuclear reaction",
     "description": "nuclear reaction that occurs when exposed to one free neutron",
-    "image": "images/items/nuclear.jpg",
+    "image": "images/items/nuclear.png",
     "link": "nuclear-reaction",
     "shortName": "nuclear"
   },
