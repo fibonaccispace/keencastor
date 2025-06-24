@@ -92,7 +92,9 @@ export default{
     scroll(){
       const height = window.scrollY
       if(height > 300){
-        this.$refs.input.blur()
+        if(this.$refs.input){
+          this.$refs.input.blur()
+        }
       }
     },
   }

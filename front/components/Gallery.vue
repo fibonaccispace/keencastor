@@ -3,7 +3,7 @@
   ul
     a(
       v-for="item in gallery" 
-      :href="item.link"
+      :href="item.type == 'item' ? `pages/${item.link}/index.php` : item.link"
     )
       li(v-if="item.type == 'item'").item.element
         Item(:item="item")
@@ -147,11 +147,11 @@ li
     background-position: center
     background-size: 150% 150%
   .clickable
-    background-image: url('images/pointinghand.svg')
+    background-image: url('/images/pointinghand.svg')
   .guidance
     width: 20px
     height: 20px
-    background-image: url('images/resizenortheastsouthwest.svg')
+    background-image: url('/images/resizenortheastsouthwest.svg')
 
 .art
   position: relative
