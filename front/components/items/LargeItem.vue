@@ -5,7 +5,7 @@
     .icon-description-wrapper
       .preview
         //- img(:src="tempImagePath.low")
-        img(:src="tempImagePath.high" :style="item.imageStyle")
+        //- img(:src="tempImagePath.high" :style="item.imageStyle")
       .description(v-html="description")
 </template>
 

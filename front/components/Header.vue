@@ -23,7 +23,7 @@
       ref="input"
       @input="change"
     ).input
-  .filters
+  //- .filters
     .block-title {{$t('header.filter')}}
     .options
       .option

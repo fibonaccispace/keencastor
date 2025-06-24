@@ -1,11 +1,11 @@
 <template lang="pug">
 .footer(ref="footer" v-if="gallery.length>0")
-  .footer-gallery
+  //- .footer-gallery
     ul
       a(v-for="item in gallery" :href="item.link")
         li(v-if="item.type == 'item'").item {{ item.title.toLowerCase() }}
-  span ©&nbsp;{{startYear}}-{{currentYear}}&nbsp;keencastor. 
-  span Thanks 
+  span ©&nbsp;{{startYear}}-{{currentYear}}&nbsp;keencastor 
+  //- span Thanks 
     a(href="https://www.thiings.co/things" target="blank").link thiings.co
     |  for amazing icons.
 </template>
