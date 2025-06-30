@@ -15,12 +15,14 @@
     "title": "Board",
     "description": "a common drawing area where anyone can draw anything and everyone can see it",
     "link": "board",
+    "image": "images/items/board.avif",
     "shortName": "board"
   },
   {
     "title": "Flappy Bird AI",
     "description": "each bird has its own simple neural network with random weights. through natural selection and a genetic algorithm, the most successful birds pass their weights to the next generation with slight mutations, leading to correct behavior and jumping at the right moment",
     "link": "flappy-bird-ai",
+    "image": "images/items/flappy.avif",
     "shortName": "flappy"
   },
   {
@@ -39,12 +41,14 @@
     "title": "Trees",
     "description": "generation of a random alien tree based on a large genotype. generating one tree may take some time",
     "link": "trees",
+    "image": "images/items/tree.avif",
     "shortName": "tree"
   },
   {
     "title": "Lamp",
     "description": "a game about a light bulb that needs to find a key to open a door. the game consists of 5 gradually more difficult levels, the game adds new mechanics gradually, but the damn 3rd level is impossible to pass",
     "link": "lamp",
+    "image": "images/items/lamp.avif",
     "shortName": "lamp"
   },
   {
@@ -57,6 +61,7 @@
     "title": "Procedural generation",
     "description": "generating terrain by overlaying several noise maps. Perlin noise is not used, i use something else",
     "link": "procedural-generation",
+    "image": "images/items/proceed.avif",
     "shortName": "proceed2d"
   },
   {
@@ -100,18 +105,21 @@
     "title": "Chladni Patterns",
     "description": "the interference surfaces of the Chladni plates are defined as the positions at which N harmonics are suppressed. rather than limiting it to a line or plane as in the classic Chladni plate experiments, a rich set of surfaces results from the presence of three orthogonal harmonics",
     "link": "chladni-patterns",
+    "image": "images/items/chladni.avif",
     "shortName": "chlandi"
   },
   {
     "title": "Neural cellular automaton",
     "description": "cellular automaton using the methods of convolutional neural networks - filters and activation functions. the example given uses a 3 by 3 filter with an inverted gaussian function",
     "link": "neural-cellular-automaton",
+    "image": "images/items/nca.avif",
     "shortName": "nca"
   },
   {
     "title": "Procedural generation 3D",
     "description": "generation of a pseudo three-dimensional canvas of heights, creating an image of the surface and biomes",
     "link": "procedural-generation-3d",
+    "image": "images/items/proceed2.avif",
     "shortName": "proceed3d"
   },
   {
