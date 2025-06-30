@@ -2,7 +2,7 @@
   .small-item 
     .content
       .preview
-        //- img(:src="tempImagePath.high")
+        img(v-if="item.image" :src="tempImagePath.high" :style="item.imageStyle")
         .title-wrapper
           .title(v-html="title")
         .description(v-html="description")
