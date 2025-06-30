@@ -5,7 +5,7 @@
         .title(v-html="title")
       .description(v-html="description")
     .preview
-      img(v-if="item.image" :src="tempImagePath.high" :style="item.imageStyle")
+      img(:src="tempImagePath.high" :style="item.imageStyle")
 </template>
 
 <script>
