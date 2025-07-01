@@ -55,6 +55,7 @@
     "title": "Julia set",
     "description": "imaginary beauty",
     "link": "julia-set",
+    "image": "images/items/julia.avif",
     "shortName": "julia"
   },
   {
@@ -73,32 +74,36 @@
   {
     "title": "Blind typing",
     "description": "touch typing trainer",
-    "imge": "images/items/blind.png",
     "link": "blind",
+    "image": "images/items/blind.avif",
     "shortName": "blind"
   },
   {
     "title": "Rock, Paper, Scissors",
     "description": "who will win? i dont know, mb u know?",
     "link": "rock-papper-scissors",
+    "image": "images/items/rps.avif",
     "shortName": "rps"
   },
   {
     "title": "Raycasting",
     "description": "a method of representing three-dimensional space where rays are cast from the observer`s camera. the rays intersect with objects in the scene, determining their location, angle of incidence, material, texture, and so on",
     "link": "raycasting",
+    "image": "images/items/ray.avif",
     "shortName": "ray"
   },
   {
     "title": "Markov chain",
     "description": "a sequence of random words and sentences achieved by searching for states for each word from the original sentence",
     "link": "markov-chain",
+    "image": "images/items/chain.avif",
     "shortName": "markov"
   },
   {
     "title": "L-system",
     "description": "recursive tree generation",
     "link": "l-system",
+    "image": "images/items/lsystem.avif",
     "shortName": "lsystem"
   },
   {
