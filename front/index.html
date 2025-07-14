@@ -1,3 +1,17 @@
+<?php
+$file = 'counter.txt';
+$dateTime = date('Y-m-d H:i:s');
+$logEntry =  "\n" . $dateTime;
+$fileHandle = fopen($file, 'a');
+if ($fileHandle) {
+    fwrite($fileHandle, $logEntry);
+    fclose($fileHandle);
+}
+
+$lines = count(file($file));
+?>
+
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -10,7 +24,6 @@
     <meta property="og:site_name" content="keencastor.ru">
     <meta property="og:title" content="keencastor">
     <meta property="og:description" content="the site about coding adventures, interesting tasks, quotes from books, pet projects, images, visualizations, generatives, web-games, interactive elements, mathematical funs, facts about numbers, photos, installations, art objects.">
-  
   </head>
   <body>
     <div id="app"></div>
