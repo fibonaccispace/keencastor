@@ -4,7 +4,8 @@ keencastor - документация
 
 Добавление нового декоратора:
 - в decors.json внести объект с полем component и его значением 'ИмяDecor'
-- в main.js внести 'ИмяDecor'
+- в main.js внести import BlackDecor from './components/decors/BlackDecor.vue'
+- в main.js внести app.component('Decoration', Decoration)
 
 Добавление нового проекта:
 - в items.json внести объект, описание должно быть на английском
