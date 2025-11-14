@@ -1,6 +1,25 @@
 <template lang="pug">
 .header
-  .logotype keencastor
+  svg.svg-filter
+    defs
+      filter#pixel(x="0%" y="0%" width="160%" height="160%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB")
+        feFlood(flood-color="#000000" flood-opacity="1" x="0" y="0" width="1" height="1" result="flood")
+        feComposite.compFilter(in="flood" in2="flood" operator="in" x="0%" y="0%" width="4" height="4" result="composite4")
+        feTile(x="0" y="0" width="100%" height="100%" in="composite4" result="tile2")
+        feComposite(in="SourceGraphic" in2="tile2" operator="in" x="0%" y="0%" width="100%" height="100%" result="composite5")
+        feMorphology.morphFilter(operator="dilate" radius="2" x="0%" y="0%" width="100%" height="100%" in="composite5" result="morphology1")
+        feBlend(in="morphology1" in2="blurOut" mode="lighten" result="blend")
+  .logotype 
+      Letter(style="--angle: 14deg") k
+      Letter(style="--angle: -8deg") e
+      Letter(style="--angle: 12deg") e
+      Letter(style="--angle: -18deg") n
+      Letter(style="--angle: 5deg") c
+      Letter(style="--angle: 8deg") a
+      Letter(style="--angle: -9deg") s
+      Letter(style="--angle: 3deg") t
+      Letter(style="--angle: 12deg") o
+      Letter(style="--angle: -7deg") r
   .description 
     .block-title {{$t('header.kind')}}
     a(
@@ -102,6 +121,12 @@ export default{
 </script>
 
 <style lang="sass">
+.svg-filter
+  position: absolute
+  pointer-events: none
+  top: 0
+  left: 50%
+  transform: translate(-50%,0)
 .input-wrapper
   position: relative
   &:has(input:focus) .placeholder
@@ -195,15 +220,13 @@ export default{
     width: 100%
 
 .logotype
+  position: relative
   margin: 0 auto 1rem auto
   width: fit-content
   text-align: center
   font-size: var(--fsize-logo)
   font-family: 'Coolvetica', Arial, sans-serif
   cursor: pointer
-  transition: .3s
-  &:hover
-    color: blue
   
 .description, 
 .input-wrapper,

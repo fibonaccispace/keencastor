@@ -10,6 +10,7 @@ import router from './router'
 import Header from './components/Header.vue'
 import Gallery from './components/Gallery.vue'
 import Footer from './components/Footer.vue'
+import Letter from './components/Letter.vue'
 
 import Decoration from './components/decors/Decoration.vue'
 import NowDecor from './components/decors/NowDecor.vue'
@@ -31,6 +32,9 @@ const app = createApp(App)
 app.component('Header', Header)
 app.component('Gallery', Gallery)
 app.component('Footer', Footer)
+
+// ДОПОЛНИТЕЛЬНЫЕ
+app.component('Letter', Letter)
 
 // ДЕКОРАТОРЫ
 app.component('Decoration', Decoration)
