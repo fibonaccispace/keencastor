@@ -31,6 +31,10 @@ const messages = {
         title: 'Neural network',
         description: 'the simplest perceptron capable of&nbsp;classifying points of&nbsp;two classes on&nbsp;a&nbsp;plane.&nbsp;by&nbsp;the way, you can switch between different activation functions to&nbsp;explore the difference of&nbsp;dependency search'
       },
+      blackhole:{
+        title: 'Black hole',
+        description: 'black hole simulation using raycast and ray physics methods'
+      },
       note:{
         title: 'Notes',
         description: 'browser note manager with save function, notes can be&nbsp;deleted and pinned, create different boards and rename them'
@@ -78,10 +82,6 @@ const messages = {
       rps:{
         title: 'Rock, paper, scissors',
         description: 'random fluctuations of&nbsp;the winner with infographics'
-      },
-      ray:{
-        title: 'Raycasting',
-        description: 'a&nbsp;method of&nbsp;representing three-dimensional space where rays are cast from the observer`s camera. the rays intersect with objects in&nbsp;the scene, determining their location, angle of&nbsp;incidence, material, texture, and so&nbsp;on'
       },
       markov:{
         title: 'Markov chain',
@@ -144,6 +144,10 @@ const messages = {
         title: 'Нейронная сеть',
         description: 'простейший перцептрон, способный классифицировать точки двух классов на&nbsp;плоскости. внутри можно переключаться между функциями-активации'
       },
+      blackhole:{
+        title: 'Черная дыра',
+        description: 'симуляция черной дыры, применен метод рейкаста и физики лучей'
+      },
       note:{
         title: 'Заметки',
         description: 'менеджер заметок внутри браузера с&nbsp;функцией сохранения, заметки можно закреплять и&nbsp;удалять, создавать бесконечно доски и&nbsp;их&nbsp;переименовывать'
@@ -192,10 +196,6 @@ const messages = {
       rps:{
         title: 'Камень, ножницы, бумага',
         description: 'всем знакомая игра на графике'
-      },
-      ray:{
-        title: 'Рэйкастинг',
-        description: 'метод трассировки, при котором лучи испускаются из&nbsp;камеры наблюдателя. луч попадая в&nbsp;объект узнает координату и&nbsp;угол попадания, чтобы покрасить пиксель в&nbsp;определенный цвет'
       },
       markov:{
         title: 'Цепь Маркова',

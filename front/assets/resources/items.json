@@ -32,6 +32,13 @@
     "shortName": "maxbolt"
   },
   {
+    "title": "Black hole",
+    "description": "black hole simulation using raycast and ray physics methods",
+    "link": "black-hole",
+    "image": "images/items/bh.png",
+    "shortName": "blackhole"
+  },
+  {
     "title": "Aurora borealis",
     "description": "just beautiful",
     "link": "aurora-borealis",
@@ -84,13 +91,6 @@
     "link": "rock-papper-scissors",
     "image": "images/items/rps.avif",
     "shortName": "rps"
-  },
-  {
-    "title": "Raycasting",
-    "description": "a method of representing three-dimensional space where rays are cast from the observer`s camera. the rays intersect with objects in the scene, determining their location, angle of incidence, material, texture, and so on",
-    "link": "raycasting",
-    "image": "images/items/ray.avif",
-    "shortName": "ray"
   },
   {
     "title": "Markov chain",
