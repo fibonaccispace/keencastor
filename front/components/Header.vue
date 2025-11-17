@@ -10,16 +10,16 @@
         feMorphology.morphFilter(operator="dilate" radius="2" x="0%" y="0%" width="100%" height="100%" in="composite5" result="morphology1")
         feBlend(in="morphology1" in2="blurOut" mode="lighten" result="blend")
   .logotype 
-      Letter(style="--angle: 14deg") k
-      Letter(style="--angle: -8deg") e
-      Letter(style="--angle: 12deg") e
-      Letter(style="--angle: -18deg") n
-      Letter(style="--angle: 5deg") c
-      Letter(style="--angle: 8deg") a
-      Letter(style="--angle: -9deg") s
-      Letter(style="--angle: 3deg") t
-      Letter(style="--angle: 12deg") o
-      Letter(style="--angle: -7deg") r
+      Letter(style="--angle: 14deg; --index:1s") k
+      Letter(style="--angle: -8deg; --index:2s") e
+      Letter(style="--angle: 12deg; --index:3s") e
+      Letter(style="--angle: -18deg; --index:4s") n
+      Letter(style="--angle: 5deg; --index:5s") c
+      Letter(style="--angle: 8deg; --index:6s") a
+      Letter(style="--angle: -9deg; --index:7s") s
+      Letter(style="--angle: 3deg; --index:8s") t
+      Letter(style="--angle: 12deg; --index:9s") o
+      Letter(style="--angle: -7deg; --index:10s") r
   .description 
     .block-title {{$t('header.kind')}}
     a(
