@@ -5,6 +5,7 @@
       a(v-for="item in gallery" :href="item.link")
         li(v-if="item.type == 'item'").item {{ item.title.toLowerCase() }}
   span ©&nbsp;{{startYear}}-{{currentYear}}&nbsp;keencastor 
+  img(src="/images/fly.png" width=80).fly
   //- span Thanks 
     a(href="https://www.thiings.co/things" target="blank").link thiings.co
     |  for amazing icons.
@@ -81,6 +82,9 @@ export default {
 </script>
 
 <style scoped lang="sass">
+.fly
+  position: absolute
+  right: 0
 .footer
   text-align: center
   transition: .3s
