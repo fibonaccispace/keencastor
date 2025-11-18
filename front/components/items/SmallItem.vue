@@ -2,7 +2,7 @@
   .small-item 
     .content
       .preview
-        //- img(:src="tempImagePath.high" :style="item.imageStyle")
+        img(:src="tempImagePath.high" :style="item.imageStyle")
         .title-wrapper
           .title(v-html="title")
         .description(v-html="description")
@@ -28,9 +28,6 @@ export default{
     },
     tempImagePath(){
       return {high:this.item.image}
-      const paths = ['assist', 'bong', 'cola', 'hz', 'smile', 'discord', 'ear', 'home', 'medusa', 'tail']
-      const rnd = paths[Math.floor(Math.random()*paths.length)]
-      return `images/${rnd}.png`
     }
   }
 }
@@ -40,6 +37,8 @@ export default{
 .small-item
   padding: 1rem 0
   position: relative
+  &:hover img 
+    opacity: .6
   .preview
     position: relative
     min-height: calc(var(--size-small-preview) / 2)
@@ -49,6 +48,7 @@ export default{
     .description
       text-align: right
     img
+      transition: .3s ease
       z-index: -5
       user-select: none
       pointer-events: none
