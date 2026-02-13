@@ -36,7 +36,8 @@
     "description": "black hole simulation using raycast and ray physics methods",
     "link": "black-hole",
     "image": "images/items/bh.png",
-    "shortName": "blackhole"
+    "shortName": "blackhole",
+    "new": true
   },
   {
     "title": "Aurora borealis",
@@ -125,7 +126,8 @@
     "description": "generation of a pseudo three-dimensional canvas of heights, creating an image of the surface and biomes",
     "link": "procedural-generation-3d",
     "image": "images/items/proceed2.avif",
-    "shortName": "proceed3d"
+    "shortName": "proceed3d",
+    "new": true
   },
   {
     "title": "Nuclear reaction",

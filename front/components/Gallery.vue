@@ -1,4 +1,20 @@
 <template lang="pug">
+.works-wrapper(v-if="$i18n.locale == 'ru'")
+  //- h1.title {{ $t('header.mywork') }}
+  .works
+    a.item(v-for="work in works" :href="work.url" target="_blank")
+      .job(v-html="work.role.toLowerCase()")
+      video(
+        v-if="work.preview.type == 'video'" 
+        :poster="work.preview.data.poster"
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+      )
+        source(:src="work.preview.data.video[0].src" type="video/mp4")
+      img(v-else :src="work.img")
+
 .gallery
   ul
     a(
@@ -21,11 +37,21 @@ export default {
   data() {
     return {
       gallery: [],
+      works: [],
       spawndelay: 200,
     }
   },
   async created() {
     this.onLoad()
+    fetch('https://www.artlebedev.ru/svalka/api/2019/?lang_id=1&data=works&works_tags=ds8x1mh&works_offset=0&works_limit=30&works_not_update_price=1')
+      .then((res)=>{
+        if(res.ok){
+          res.json().then((data)=>{
+            this.works = data.works?.list
+            console.log(this.works)
+          })
+        }
+      })
   },
   methods:{
     async onLoad(){
@@ -91,6 +117,39 @@ export default {
 </script>
 
 <style lang="sass">
+.works-wrapper
+  position: relative
+  z-index: 1
+  .works
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 10px
+  h1
+    text-align: center
+    margin-bottom: 20px
+  .item
+    position: relative
+    height: 340px
+    flex-grow: 1
+    border-radius: 15px
+    overflow: hidden
+    border: none
+    text-decoration: none
+    color: inherit
+    .job
+      position: absolute
+      bottom: 5px
+      left: 5px
+      border-radius: 5px
+      padding: 5px 8px
+      background: rgba(0,0,0,.8)
+      color: white
+    img, video
+      width: 100%
+      height: 100%
+      object-fit: cover
+
 .gallery
   transition: .6s cubic-bezier(0.6, 0.38, 0.3, 0.8)
   .element
@@ -102,15 +161,16 @@ export default {
     margin-bottom: .5rem
   .item:hover .title
     color: blue
-  .title
-    font-size: var(--fsize-project-title)
-    font-family: 'Coolvetica', Arial, sans-serif
-    line-height: 95%
-    text-shadow: 0 0 .5rem var(--color-text-invert)
-    transition: .3s
-  .description
-    text-shadow: 0 0 .5rem var(--color-text-invert)
-    line-height: 115%
+
+.title
+  font-size: var(--fsize-project-title)
+  font-family: 'Coolvetica', Arial, sans-serif
+  line-height: 95%
+  text-shadow: 0 0 .5rem var(--color-text-invert)
+  transition: .3s
+.description
+  text-shadow: 0 0 .5rem var(--color-text-invert)
+  line-height: 115%
 </style>
 
 <style scoped lang="sass">
