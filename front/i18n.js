@@ -26,7 +26,8 @@ const messages = {
       theme: "light",
       scrpits: "motion",
       mywork: "Works outside",
-      mywork_job: "designer & programmer"
+      mywork_job: "designer & programmer",
+      contact: "contacts"
     },
     items:{
       nn:{
@@ -141,6 +142,7 @@ const messages = {
       theme: "светлое",
       scrpits: "моушн",
       mywork: "Публичные работы",
+      contact: "контакты"
     },
     items:{
       nn:{

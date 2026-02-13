@@ -69,6 +69,13 @@
       .option(@click="toggleLanguage") {{$t('header.lang')}}
       //- .option {{$t('header.theme')}}
       .option(@click="toggleScripts" ref="scripts").active {{$t('header.scrpits')}}
+
+  .contactus
+    .block-title {{$t('header.contact')}}
+    .options
+      a(href="https://t.me/+79267869200" target="_blank").option телега
+      a(href="https://vk.com/fibonaccispace" target="_blank").option вк
+      a(href="mailto:fibace@mail.ru" target="_blank").option почта
 </template>
 
 <script>
@@ -230,7 +237,8 @@ export default{
   
 .description, 
 .input-wrapper,
-.filters
+.filters,
+.settings
   margin-bottom: 1.5rem
 
 .description p
@@ -246,7 +254,8 @@ export default{
   margin-bottom: 1rem
 
 .settings .block-title,
-.filters .block-title
+.filters .block-title,
+.contactus .block-title
   margin-bottom: .5rem
 .description .block-title
   margin-bottom: .3rem
