@@ -27,9 +27,12 @@
         Decoration(:item="item")
         .clickable(v-if="item.clickable")
         .guidance(v-if="item.guidance")
-      li(v-else-if="item.type == 'art'").art.element
+      li(v-else-if="item.type == 'art'" :class="['art','element', (item.link ? 'linked' : '')]")
         img(:src="item.path")
-        a(:href="`https://www.instagram.com/${item.author}`" target="blank").author @{{item.author}}
+        a(
+          :href="!item.link ? `https://www.instagram.com/${item.author}` : item.link" 
+          target="_blank"
+        ).author @{{item.author}}
 </template>
 
 <script>
@@ -225,6 +228,8 @@ li
     outline: 10px solid white
     box-shadow: 0 3px 10px 5px rgba(0, 0, 0, 0.5)
     width: 60%
+  &.linked img
+    box-shadow: 0 3px 70px 5px rgba(0, 0, 0, 0.4)
   .author
     position: absolute
     bottom: calc(20% - 15px)
@@ -237,4 +242,9 @@ li
     cursor: alias
     &:hover 
       opacity: 1
+  &.linked .author
+    opacity: 0.7
+    &:hover
+      opacity: 1
+
 </style>

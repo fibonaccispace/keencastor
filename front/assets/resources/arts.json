@@ -14,6 +14,14 @@
     }
   },
   {
+    "path": "images/arts/artlebedev30.png",
+    "author": "developer",
+    "link": "https://www.artlebedev.ru/30/",
+    "style": {
+      "background": "red"
+    }
+  },
+  {
     "path": "images/arts/thegraphicaddict.jpg",
     "author": "thegraphicaddict",
     "style": {
