@@ -6,6 +6,7 @@ const messages = {
       kind: "what's kind",
       v1linktext: 'old version of&nbsp;the site',
       description: '. library of coding adventures, interesting tasks, quotes from books, pet projects, images, visualizations, generatives, web-games, interactive elements, mathematical funs, facts about numbers, photos, installations, art objects.',
+      about: 'here ill post projects that interest me, which i was lucky enough to create. no libraries are used, everything is written in vanilla js for the sake of pomposity.',
       placeholder: 'tap here your ideas',
       placeholders: [
         'maths',
@@ -122,6 +123,7 @@ const messages = {
       kind: "о чем сайт",
       v1linktext: 'предыдущая версия сайта',
       description: '. галерея о&nbsp;кодовых приключениях, интересных задачах, цитатах из&nbsp;книг, мини-проектах, изображениях, визуализациях, генеративном дизайне, веб-играх, интерактивных элементах, банк математических приколов, фактах о&nbsp;числах, фотографиях, инсталляциях и&nbsp;арт-объектах.',
+      about: 'тут я&nbsp;посщу интересующие меня проекты, которые мне посчастливилось создать. не&nbsp;используется никакие библиотеки, все написано на&nbsp;ванильном&nbsp;джэ-эс для напыщенности.',
       placeholder: 'предложи свою идею',
       placeholders: [
         'математика',

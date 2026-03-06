@@ -28,6 +28,8 @@
       v-html="$t('header.v1linktext')"
     ).link
     p(v-html="$t('header.description')")
+  .description 
+    p(v-html="$t('header.about')")
   //- .input-wrapper
     .placeholder(ref="placeholder") {{$t('header.placeholder')}}:
       .placeholder-inner
