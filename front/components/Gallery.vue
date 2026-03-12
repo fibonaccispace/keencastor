@@ -20,6 +20,7 @@
     a(
       v-for="item in gallery" 
       :href="item.type == 'item' ? `pages/${item.link}/index.php` : item.link"
+      :target="_blank"
     )
       li(v-if="item.type == 'item'").item.element
         Item(:item="item")
@@ -27,6 +28,9 @@
         Decoration(:item="item")
         .clickable(v-if="item.clickable")
         .guidance(v-if="item.guidance")
+      li(v-else-if="item.type == 'web'").web.element
+        .url {{item.link.replace('https://www.','')}}
+        img(:src="item.preview")
       li(v-else-if="item.type == 'art'" :class="['art','element', (item.link ? 'linked' : '')]")
         img(:src="item.path")
         a(
@@ -51,7 +55,6 @@ export default {
         if(res.ok){
           res.json().then((data)=>{
             this.works = data.works?.list
-            console.log(this.works)
           })
         }
       })
@@ -62,7 +65,8 @@ export default {
       const items = (await import('../assets/resources/items.json')).default
       const decors = (await import('../assets/resources/decors.json')).default
       const arts = (await import('../assets/resources/arts.json')).default
-      this.refactoring(items, decors, arts)
+      const webs = (await import('../assets/resources/webs.json')).default
+      this.refactoring(items, decors, arts, webs)
 
       this.$nextTick(()=>{
         const items = document.querySelectorAll('ul .element')
@@ -78,7 +82,7 @@ export default {
     random(min, max){
       return Math.floor(Math.random()*(max-min)+min)
     },
-    refactoring(items, decors, arts){
+    refactoring(items, decors, arts, webs){
 
       // ДОБАВЛЕНИЕ ТИПА ITEM
       // ДОБАВЛЕНИЕ ТРЕХТИПОВОГО-КЛАССА
@@ -103,15 +107,22 @@ export default {
       // ДОБАВЛЕНИЕ ТИПА ART
       arts.forEach((art) => { return art.type = "art" })
 
+      // ДОБАВЛЕНИЕ ТИПА ART
+      webs.forEach((web) => { return web.type = "web" })
+
       const res = []
       const shiftD = Math.floor(items.length/(decors.length))
       const shiftA = Math.floor(items.length/(arts.length))
-      for(let i = 0, d = 0, a = 0; i < items.length; i++){
+      const shiftW = Math.floor((items.length-1)/(webs.length))
+      for(let i = 0, d = 0, a = 0, w = 0; i < items.length; i++){
         res.push(items[i])
         if((i+1)%shiftD==0 && decors[d])
           res.push(decors[d++])
         if((i+1)%shiftA==0 && arts[a])
           res.push(arts[a++])
+        if((i+1)%shiftW==0 && webs[w]){
+          res.push(webs[w++])
+        }
       }
       this.gallery = res
     },
@@ -246,5 +257,24 @@ li
     opacity: 0.7
     &:hover
       opacity: 1
+
+.web
+  outline: 1px solid rgba(0,0,0,0.05)
+  display: flex
+  flex-direction: column
+  position: relative
+  overflow: hidden
+  border-radius: 10px
+  box-shadow: 0 20px 40px 0px rgba(0,0,0,0.2)
+  .url
+    text-align: center
+    font-size: 12px
+    padding: 2px
+    width: 100%
+    background: linear-gradient(to top, rgba(240,240,240,0.9), white)
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.5)
+    color: rgba(0,0,0,0.5)
+  img
+    width: 100%
 
 </style>
