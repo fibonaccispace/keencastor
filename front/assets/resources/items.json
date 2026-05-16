@@ -141,5 +141,12 @@
     "description": "application for displaying 3D data in json format",
     "link": "3d-visualization",
     "shortName": "visual3d"
+  },
+  {
+    "title": "Mars procedural",
+    "description": "the same generation, only tailored for Mars",
+    "image": "images/items/mars.png",
+    "link": "mars-procedural",
+    "shortName": "mars"
   }
 ]

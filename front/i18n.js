@@ -115,6 +115,10 @@ const messages = {
         title: '3D visualization',
         description: 'application for displaying 3D&nbsp;data in&nbsp;json format'
       },
+      mars:{
+        title: 'Mars procedural',
+        description: 'the same generation, only tailored for Mars'
+      },
     }
   },
 
@@ -230,6 +234,10 @@ const messages = {
       visual3d:{
         title: '3Д-визуализатор',
         description: 'приложение для отображения трехмерных данных в&nbsp;джейсон формате'
+      },
+      mars:{
+        title: 'Марс процедурный',
+        description: 'такая&nbsp;же генерация, только заточенная под марс'
       },
     }
   }
