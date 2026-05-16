@@ -9,7 +9,7 @@
     "component": "WaveDecor",
     "style":{
       "backgroundColor": "rgb(246, 197, 229)",
-      "borderRadius": "5px"
+      "borderRadius": "10px"
     }
   },
   {
@@ -34,6 +34,14 @@
     "guidance": true,
     "style":{
       "cursor": "ew-resize"
+    }
+  },
+  {
+    "component": "SilverDecor",
+    "clickable": true,
+    "style":{
+      "cursor": "pointer",
+      "borderRadius": "10px"
     }
   }
 ]
